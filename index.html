@@ -276,6 +276,21 @@
         .industrial-button:hover {
             background-color: #b91c1c; /* Deeper crimson */
         }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hud-scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 180, 171, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+        .rim-light {
+            box-shadow: inset 0 0 40px rgba(255, 180, 171, 0.1), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
     </style>
 <style>
 @keyframes ken-burns {
@@ -981,70 +996,174 @@
 </section>
 
 <!-- Ecosystem Section -->
-<section class="py-24 md:py-32 relative overflow-hidden bg-surface-container-lowest">
-<div class="absolute inset-0 blueprint-grid opacity-30 pointer-events-none"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<div class="max-w-3xl mb-16 md:mb-24">
-<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-6 tracking-tight">One Partner. <span class="text-primary-container">Complete</span> Weighing Solutions.</h2>
-<p class="font-body-lg text-body-lg text-secondary-fixed-dim">Integrated precision architecture for enterprise operations. From high-capacity infrastructure to micro-telemetry, we deliver a unified ecosystem of exactitude.</p>
+<!-- Product Ecosystem Section -->
+<section class="py-24 overflow-hidden bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Header -->
+<div class="mb-16 max-w-3xl">
+<span class="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Engineered Ecosystem</span>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-background mb-6 leading-tight">
+                        ONE PARTNER. COMPLETE WEIGHING SOLUTIONS.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        From high-capacity infrastructure to micro-telemetry, we deliver a unified ecosystem of exactitude.
+                    </p>
 </div>
-<!-- Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-gutter min-h-[800px]">
-<!-- Card 1: Weighbridge (Large) -->
-<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-500 hover:border-outline-variant">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A heavy-duty truck scale weighbridge installation in a modern logistics hub. Cinematic lighting creates deep shadows contrasting with high-contrast red accents. Professional Industry 4.0 aesthetic with enterprise product ecosystem focus. The mood is industrial, authoritative, and structurally imposing." style="background-image: url('./assets/images/Picture8.jpg');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent opacity-90"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full">
-<span class="inline-block px-3 py-1 bg-surface-variant/80 backdrop-blur-sm border border-outline-variant text-on-surface font-label-sm text-label-sm uppercase tracking-widest rounded-full mb-4">Infrastructure</span>
-<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Heavy Capacity Systems</h3>
-<p class="font-body-md text-body-md text-secondary-fixed-dim mb-6 max-w-md">Industrial-grade weighbridges engineered for relentless operational cycles and unyielding accuracy in extreme environments.</p>
-<button class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase group-hover:text-primary-container transition-colors">
-                                Get a Quote <span class="material-symbols-outlined text-lg">arrow_forward</span>
+<!-- Interactive Slider -->
+<div class="relative group">
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-12 cursor-grab active:cursor-grabbing" id="product-slider">
+<!-- Card 1 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Heavy Capacity Weighbridges" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/Picture8.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<!-- HUD Overlay -->
+<div class="absolute top-6 right-6 flex flex-col items-end gap-2 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+<div class="bg-primary/20 backdrop-blur-md border border-primary/30 px-3 py-1 rounded text-[10px] font-mono text-primary">CAPACITY: 100T+</div>
+<div class="bg-primary/20 backdrop-blur-md border border-primary/30 px-3 py-1 rounded text-[10px] font-mono text-primary">PRECISION: OIML R60</div>
+</div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Heavy Capacity Weighbridges</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        Mission-critical road and rail weighbridge installations for high-volume logistics hubs.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
 </button>
 </div>
 </div>
-<!-- Card 2: Rail (Medium) -->
-<div class="md:col-span-2 relative group overflow-hidden rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-500 hover:border-outline-variant">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic industrial shot of rail wagon weighing systems. A freight train being weighed on high-precision tracks. Moody atmosphere, sunset light reflecting off steel surfaces. Professional enterprise engineering style emphasizing heavy transport logistics." style="background-image: url('./assets/images/Picture5.jpg');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent opacity-90"></div>
-<div class="absolute bottom-0 left-0 p-6 w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Rail &amp; Freight Precision</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Dynamic in-motion weighing for continuous logistics flow.</p>
+</div>
+<!-- Card 2 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Rail &amp; Freight Systems" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/Picture5.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Rail &amp; Freight Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        In-motion rail weighing and freight monitoring systems for global infrastructure networks.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
 </div>
 </div>
-<!-- Card 3: Digital Twin Diagram (Medium) -->
-<div class="relative group overflow-hidden rounded-lg border border-surface-variant bg-surface-container-low p-6 flex flex-col justify-between blueprint-glow">
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 0;">account_tree</span>
-<span class="font-label-sm text-label-sm text-surface-variant uppercase tracking-widest px-2 py-1 border border-surface-variant rounded">Architecture</span>
 </div>
-<div class="flex-grow flex items-center justify-center py-4 relative">
-<!-- CSS Diagram representation -->
-<div class="w-full h-full relative">
-<div class="absolute top-1/2 left-4 w-8 h-8 rounded-full border border-primary-container bg-surface-container z-10 flex items-center justify-center"><div class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></div></div>
-<div class="absolute top-1/4 right-4 w-8 h-8 rounded border border-outline bg-surface-container z-10"></div>
-<div class="absolute bottom-1/4 right-4 w-8 h-8 rounded border border-outline bg-surface-container z-10"></div>
-<!-- Connecting lines -->
-<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none">
-<path class="opacity-50" d="M 40 50 Q 80 50 100 25 T 150 25" fill="none" stroke="#e63946" stroke-dasharray="4 4" stroke-width="1" vector-effect="non-scaling-stroke"></path>
-<path class="opacity-50" d="M 40 50 Q 80 50 100 75 T 150 75" fill="none" stroke="#e63946" stroke-dasharray="4 4" stroke-width="1" vector-effect="non-scaling-stroke"></path>
-</svg>
+<!-- Card 3 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Tank &amp; Vessel Weighing" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/Picture1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Tank &amp; Vessel Weighing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        High-precision chemical and processing vessel measurement for continuous production flows.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
 </div>
 </div>
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Ecosystem Integration</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Seamless API and IoT connectivity.</p>
+</div>
+<!-- Card 4 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Ladle Weighing Solutions" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/Picture3.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Ladle Weighing Solutions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        Extreme-temperature weighing modules for heavy foundry and metallurgical operations.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
 </div>
 </div>
-<!-- Card 4: Load Cell (Medium) -->
-<div class="relative group overflow-hidden rounded-lg border border-surface-variant bg-surface-container-low transition-all duration-500 hover:border-outline-variant">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a high-performance industrial load cell sensor. Detailed technical engineering render with a 'Digital Twin' glowing overlay showing measurement telemetry. Polished steel, red light refraction, high-tech aesthetic. Represents micro-telemetry and extreme accuracy." style="background-image: url('./assets/images/Picture7.jpg');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-90"></div>
-<div class="absolute bottom-0 left-0 p-6 w-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Precision Sensors</h3>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Hermetically sealed load cells.</p>
+</div>
+<!-- Card 5 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Sheet &amp; Bar Weighing" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/Picture7.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Sheet &amp; Bar Weighing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        Inline steel measurement systems with millimetric accuracy for material yield optimization.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
 </div>
 </div>
+</div>
+<!-- Card 6 -->
+<div class="flex-none w-[85vw] md:w-[600px] snap-center">
+<div class="relative h-[500px] rounded-lg overflow-hidden group/card rim-light bg-surface-container-low transition-all duration-500 hover:scale-[1.02]">
+<img alt="Load Cell Analytics" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-90 transition-all duration-700" src="./assets/images/P4.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute inset-0 hud-scanline pointer-events-none"></div>
+<div class="absolute bottom-0 p-8 w-full translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Load Cell Analytics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-100">
+                                        Digital-twin telemetry and predictive maintenance for mission-critical sensor networks.
+                                    </p>
+<button class="mt-6 flex items-center gap-2 text-primary font-label-md text-label-md group/btn">
+                                        Get a Quote <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Controls -->
+<div class="flex justify-between items-center mt-12">
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-surface-container-highest flex items-center justify-center text-on-background hover:bg-primary hover:text-on-primary transition-all" onclick="scrollSlider('left')">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-surface-container-highest flex items-center justify-center text-on-background hover:bg-primary hover:text-on-primary transition-all" onclick="scrollSlider('right')">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Pagination -->
+<div class="flex gap-2" id="pagination-dots">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="hidden md:block font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">
+                            SCROLL TO EXPLORE THE ECOSYSTEM
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical HUD Static Section -->
+<section class="bg-surface-container-lowest py-16 border-t border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="border-l border-primary/30 pl-6">
+<div class="font-headline-md text-headline-md text-on-background mb-1">99.99%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Uptime Reliability</div>
+</div>
+<div class="border-l border-primary/30 pl-6">
+<div class="font-headline-md text-headline-md text-on-background mb-1">0.01%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Margin of Error</div>
+</div>
+<div class="border-l border-primary/30 pl-6">
+<div class="font-headline-md text-headline-md text-on-background mb-1">100+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Global Certs</div>
+</div>
+<div class="border-l border-primary/30 pl-6">
+<div class="font-headline-md text-headline-md text-on-background mb-1">24/7</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Technical Support</div>
 </div>
 </div>
 </section>
@@ -1222,6 +1341,46 @@
                 nav.style.backdropFilter = 'none';
             }
         });
+
+        // Product Slider Controls
+        const slider = document.getElementById('product-slider');
+        const dots = document.getElementById('pagination-dots');
+
+        function scrollSlider(direction) {
+            const scrollAmount = 624; // Card width + gap
+            if (direction === 'left') {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        if (slider && dots) {
+            slider.addEventListener('scroll', () => {
+                const index = Math.round(slider.scrollLeft / 624);
+                Array.from(dots.children).forEach((dot, i) => {
+                    dot.className = i === index ? 'w-2 h-2 rounded-full bg-primary transition-all duration-300' : 'w-2 h-2 rounded-full bg-surface-container-highest transition-all duration-300';
+                });
+            });
+
+            // Atmospheric parallax effect on cards
+            slider.addEventListener('mousemove', (e) => {
+                const cards = slider.querySelectorAll('[class*="group/card"]');
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    if (x > 0 && x < rect.width && y > 0 && y < rect.height) {
+                        const xPercent = (x / rect.width - 0.5) * 10;
+                        const yPercent = (y / rect.height - 0.5) * 10;
+                        card.style.transform = `perspective(1000px) rotateX(${-yPercent}deg) rotateY(${xPercent}deg) scale(1.02)`;
+                    } else {
+                        card.style.transform = '';
+                    }
+                });
+            });
+        }
     </script>
 
 <!-- Sticky CTA -->
