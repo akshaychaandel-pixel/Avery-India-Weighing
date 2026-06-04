@@ -323,15 +323,24 @@
   width: 100%;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glow-effect {
+            background: radial-gradient(circle at right center, rgba(255, 84, 75, 0.15) 0%, transparent 70%);
+        }
 </style></head>
 <body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
 <!-- TopNavBar -->
-<header class="w-full relative z-50 border-b border-white/10 bg-background/90 backdrop-blur-md animate-in fade-in slide-in-from-top duration-1000">
+<header class="w-full absolute top-0 left-0 z-50 bg-transparent border-b border-white/10 animate-in fade-in slide-in-from-top duration-1000">
 <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <!-- Logo -->
-<a class="font-brand-logo text-brand-logo text-primary uppercase tracking-widest shrink-0" href="#">
-                AVERY INDIA
-            </a>
+<a class="shrink-0 flex items-center" href="#">
+    <img src="./assets/images/logo.png" alt="Avery Weigh-Tronix" class="h-8 md:h-10 w-auto object-contain" />
+</a>
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary duration-200" href="#">Solutions</a>
@@ -357,13 +366,13 @@
 <!-- Main Content -->
 <main class="flex-grow relative flex flex-col">
 <!-- Hero Section -->
-<section class="relative flex-grow flex flex-col justify-center min-h-[80vh] overflow-hidden bg-surface-container-lowest perspective-[1000px] min-h-[85vh]">
+<section class="relative flex-grow flex flex-col justify-center overflow-hidden bg-surface-container-lowest perspective-[1000px] min-h-screen">
 <!-- Background Image -->
-<div class="absolute inset-0 z-0 transform-gpu translate-z-[-10px] scale-110">
+<div class="absolute inset-0 z-0 transform-gpu translate-z-[-10px] scale-110 origin-top">
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
-<img alt="Engineered for Absolute Precision Hero Background" class="w-full h-full object-cover object-center md:object-right opacity-80 animate-ken-burns" src="./assets/images/ChatGPT Image Jun 3, 2026, 05_51_54 PM.png"/>
+<img alt="Engineered for Absolute Precision Hero Background" class="w-full h-full object-cover object-[center_top] md:object-[right_15%] opacity-80 animate-ken-burns" src="./assets/images/ChatGPT Image Jun 3, 2026, 05_51_54 PM.png"/>
 </div>
-<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-24 pb-48 md:pb-56 flex flex-col md:flex-row items-center transform-gpu translate-z-[10px]">
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-40 pb-48 md:pb-56 flex flex-col md:flex-row items-center transform-gpu translate-z-[10px]">
 <!-- Left Content Area -->
 <div class="w-full md:w-1/2 flex flex-col gap-8 glass-panel p-6 rounded-2xl md:bg-transparent md:border-none md:backdrop-blur-none bg-background/40 backdrop-blur-md border-white/20">
 <div class="flex flex-col gap-4">
@@ -396,88 +405,116 @@
 <!-- Section Header -->
 <div class="text-center mb-12 max-w-3xl">
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-wide mb-4">
-                    INITIATE EXPERT CONSULTATION
+                    Ask Your Query
                 </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                    Connect with our technical precision specialists to architect a bespoke weighing or industrial automation solution tailored to your operational parameters.
-                </p>
 </div>
 <!-- Compact Enquiry Form - Refined Glassmorphism -->
 <div class="glass-panel w-full max-w-5xl rounded-2xl p-8 md:p-10 relative border border-white/10 bg-surface-container/30 backdrop-blur-xl shadow-2xl">
-<!-- Trust Markers (Top Right subtle indicator) -->
-<div class="absolute top-6 right-6 flex gap-4 hidden sm:flex">
-<div class="flex items-center gap-1.5 text-on-surface-variant opacity-70" title="ISO 9001 Certified">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-<span class="font-label-sm text-label-sm uppercase">ISO 9001</span>
-</div>
-<div class="flex items-center gap-1.5 text-on-surface-variant opacity-70" title="Secure Transmission">
-<span class="material-symbols-outlined text-[16px]">lock</span>
-<span class="font-label-sm text-label-sm uppercase">SECURE</span>
-</div>
-</div>
 <form action="#" class="mt-4 sm:mt-0" method="POST">
-<!-- Primary Inputs Grid (4 Column Layout on Desktop) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 mb-8">
-<!-- Full Name -->
-<div class="flex flex-col relative group">
-<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2" for="full_name">Primary Contact</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10">person</span>
-<input class="w-full bg-surface-dim/50 border border-white/10 rounded-xl pl-12 py-3 text-body-md font-body-md text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="full_name" name="full_name" placeholder="John Doe" required="" type="text"/>
+<!-- Ultra-compact Horizontal Form Grid (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5 mb-5">
+    <!-- Full Name -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="full_name">Full Name</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">person</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="full_name" name="full_name" placeholder="John Doe" required="" type="text"/>
+        </div>
+    </div>
+    <!-- Email ID -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="email">Email ID</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">mail</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="email" name="email" placeholder="j.doe@acme.com" required="" type="email"/>
+        </div>
+    </div>
+    <!-- Phone No. -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="phone">Phone No.</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">call</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="phone" name="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+        </div>
+    </div>
+    <!-- Company Name -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="company">Company Name</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">domain</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="company" name="company" placeholder="Acme Corp" required="" type="text"/>
+        </div>
+    </div>
+    <!-- Industry -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="industry">Industry *</label>
+        <div class="relative">
+            <select class="w-full bg-surface-dim/50 border border-white/10 rounded-lg py-2.5 pl-3 pr-8 text-body-sm font-body-sm text-on-surface appearance-none cursor-pointer focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="industry" name="industry" required>
+                <option class="bg-surface-container-high text-on-surface-variant" disabled="" selected="" value="">Select Industry</option>
+                <option class="bg-surface-container-high text-on-surface" value="Steel & Metal">Steel & Metal</option>
+                <option class="bg-surface-container-high text-on-surface" value="Chemical">Chemical</option>
+                <option class="bg-surface-container-high text-on-surface" value="Pharmaceutical">Pharmaceutical</option>
+                <option class="bg-surface-container-high text-on-surface" value="Cement">Cement</option>
+                <option class="bg-surface-container-high text-on-surface" value="Food & Beverage">Food & Beverage</option>
+                <option class="bg-surface-container-high text-on-surface" value="Manufacturing">Manufacturing</option>
+                <option class="bg-surface-container-high text-on-surface" value="Other">Other</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">arrow_drop_down</span>
+        </div>
+    </div>
+    <!-- State -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="state">State</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">map</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="state" name="state" placeholder="State" type="text"/>
+        </div>
+    </div>
+    <!-- City -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="city">City</label>
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">location_city</span>
+            <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="city" name="city" placeholder="City" type="text"/>
+        </div>
+    </div>
+    <!-- Application Interested In -->
+    <div class="flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="application">Application Interested In *</label>
+        <div class="relative">
+            <select class="w-full bg-surface-dim/50 border border-white/10 rounded-lg py-2.5 pl-3 pr-8 text-body-sm font-body-sm text-on-surface appearance-none cursor-pointer focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="application" name="application" required>
+                <option class="bg-surface-container-high text-on-surface-variant" disabled="" selected="" value="">Select Application</option>
+                <option class="bg-surface-container-high text-on-surface" value="Tank Weighing System">Tank Weighing System</option>
+                <option class="bg-surface-container-high text-on-surface" value="Sheet Weighing System">Sheet Weighing System</option>
+                <option class="bg-surface-container-high text-on-surface" value="Ladle Weighing System">Ladle Weighing System</option>
+                <option class="bg-surface-container-high text-on-surface" value="Bar Weighing System">Bar Weighing System</option>
+                <option class="bg-surface-container-high text-on-surface" value="Multiple Solutions">Multiple Solutions</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">arrow_drop_down</span>
+        </div>
+    </div>
 </div>
+
+<!-- Textarea and Submit Row -->
+<div class="flex flex-col lg:flex-row gap-4 items-stretch mb-2">
+    <!-- Specify Your Requirement -->
+    <div class="flex-1 flex flex-col relative group">
+        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="requirement">Specify Your Requirement *</label>
+        <div class="relative h-full">
+            <textarea class="w-full h-full bg-surface-dim/50 border border-white/10 rounded-lg p-3 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0 min-h-[50px] resize-none" id="requirement" name="requirement" placeholder="Please provide details about your requirements..." required></textarea>
+        </div>
+    </div>
+    <!-- Submit Button -->
+    <div class="lg:w-48 flex items-end">
+        <button class="w-full bg-primary text-on-primary font-label-md text-label-sm uppercase px-6 py-3 rounded-lg flex items-center justify-center gap-2 group shadow-[0_0_15px_rgba(255,84,75,0.2)] hover:shadow-[0_0_25px_rgba(255,84,75,0.4)] hover:bg-primary-container transition-all active:scale-95 border border-primary/50" type="submit" style="height: calc(100% - 20px);">
+            <span class="font-label-md tracking-wider">Enquire Now</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </button>
+    </div>
 </div>
-<!-- Company -->
-<div class="flex flex-col relative group">
-<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2" for="company">Organization</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10">domain</span>
-<input class="w-full bg-surface-dim/50 border border-white/10 rounded-xl pl-12 py-3 text-body-md font-body-md text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="company" name="company" placeholder="Acme Corp" required="" type="text"/>
-</div>
-</div>
-<!-- Email -->
-<div class="flex flex-col relative group">
-<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2" for="email">Corporate Email</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10">mail</span>
-<input class="w-full bg-surface-dim/50 border border-white/10 rounded-xl pl-12 py-3 text-body-md font-body-md text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="email" name="email" placeholder="j.doe@acme.com" required="" type="email"/>
-</div>
-</div>
-<!-- Phone -->
-<div class="flex flex-col relative group">
-<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2" for="phone">Direct Dial</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10">call</span>
-<input class="w-full bg-surface-dim/50 border border-white/10 rounded-xl pl-12 py-3 text-body-md font-body-md text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="phone" name="phone" placeholder="+1 (555) 000-0000" type="tel"/>
-</div>
-</div>
-</div>
-<!-- Secondary Selection Row -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 items-end">
-<!-- Inquiry Type Dropdown -->
-<div class="flex flex-col relative col-span-1 md:col-span-2 group">
-<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2" for="inquiry_type">Scope of Inquiry</label>
-<div class="relative">
-<select class="w-full bg-surface-dim/50 border border-white/10 rounded-xl py-3 pl-4 pr-10 text-body-md font-body-md text-on-surface appearance-none cursor-pointer focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="inquiry_type" name="inquiry_type">
-<option class="bg-surface-container-high text-on-surface-variant" disabled="" selected="" value="">Select Technical Domain...</option>
-<option class="bg-surface-container-high text-on-surface" value="industrial_weighing">Industrial Weighing Systems</option>
-<option class="bg-surface-container-high text-on-surface" value="automation">Process Automation &amp; Control</option>
-<option class="bg-surface-container-high text-on-surface" value="software">Data Integration Software</option>
-<option class="bg-surface-container-high text-on-surface" value="service">Calibration &amp; Maintenance Service</option>
-</select>
-<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10">arrow_drop_down</span>
-</div>
-</div>
-<!-- Submit Action -->
-<div class="col-span-1 flex justify-end">
-<button class="w-full bg-primary text-on-primary font-label-md text-label-md uppercase px-8 py-4 rounded-xl flex items-center justify-center gap-2 group shadow-[0_0_15px_rgba(255,84,75,0.2)] hover:shadow-[0_0_25px_rgba(255,84,75,0.4)] hover:bg-primary-container transition-all active:scale-95 border border-primary/50" type="submit">
-<span class="font-label-md text-label-md uppercase tracking-wider">Enquire Now</span>
-<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant/60 text-center mt-4">
-                        By deploying this request, you agree to our <a class="underline hover:text-primary transition-colors" href="#">Data Privacy Protocol</a>.
-                    </p>
+<p class="font-body-sm text-[10px] text-on-surface-variant/60 text-center mt-2">
+    By deploying this request, you agree to our <a class="underline hover:text-primary transition-colors" href="#">Data Privacy Protocol</a>.
+</p>
 </form>
 </div>
 </div>
@@ -635,19 +672,38 @@
 </div>
 </section>
 <!-- Final CTA Banner -->
-<section class="py-24 px-margin-desktop bg-on-primary-fixed-variant text-white relative overflow-hidden bg-background">
-<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
-<span class="material-symbols-outlined text-[30rem] leading-none select-none">architecture</span>
+<div class="py-24 px-margin-desktop bg-background w-full">
+<!-- Horizontal CTA Strip -->
+<section class="w-full max-w-container-max mx-auto relative overflow-hidden rounded-xl bg-surface-container-low border border-white/10 grid-pattern glow-effect group" style="max-height: 300px;">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-80 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 py-10 md:py-12 gap-8 md:gap-12">
+<!-- Column 1: Trust Badge -->
+<div class="flex flex-col items-center md:items-start shrink-0 space-y-2 border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-8 w-full md:w-auto">
+<div class="flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-surface">115+ YEARS IN INDIA</span>
 </div>
-<div class="max-w-container-max mx-auto text-center relative z-10">
-<h2 class="text-headline-xl font-headline-xl mb-8 leading-tight">Not Sure Which Process Weighing Solution Fits Your Application?</h2>
-<p class="text-body-lg mb-12 opacity-80 max-w-3xl mx-auto">Our engineers are ready to help you design a custom weighing architecture tailored to your specific industrial requirements and spatial constraints.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-6">
-<button class="px-10 py-5 bg-white text-on-primary-container font-label-md rounded-full hover:scale-105 transition-all">Enquire Now</button>
-<button class="px-10 py-5 border-2 border-white text-white font-label-md rounded-full hover:bg-white hover:text-on-primary-container transition-all">DOWNLOAD FULL CATALOG</button>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0;">groups</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">TRUSTED BY LEADERS</span>
+</div>
+</div>
+<!-- Column 2: Main Headline -->
+<div class="flex-grow text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-wide">
+                        Engineering Your <br class="hidden md:block"/><span class="text-primary-container">Precision Solution</span>
+</h2>
+</div>
+<!-- Column 3: Action Button -->
+<div class="shrink-0 w-full md:w-auto flex justify-center md:justify-end">
+<button class="w-full md:w-auto flex items-center justify-center gap-2 bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 transform group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(255,84,75,0.3)]">
+<span>GET EXPERT ADVICE</span>
+<span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
 </div>
 </div>
 </section>
+</div>
 <!-- Hero Section: Command Center Integration -->
 <section class="relative min-h-[80vh] flex flex-col items-center justify-center technical-grid px-margin-desktop py-8">
 <div class="max-w-container mx-auto w-full text-center mb-12">
@@ -838,17 +894,46 @@
 <div class="w-2 h-1 rounded-full bg-primary/20"></div>
 <div class="w-2 h-1 rounded-full bg-primary/20"></div>
 </div>
-</div></section><section class="px-margin-desktop bg-primary text-on-primary py-12">
-<div class="max-w-container mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-<div class="max-w-xl text-center md:text-left">
-<h2 class="text-headline-xl font-headline-xl mb-4 leading-tight">Ready to integrate industrial intelligence?</h2>
-<p class="text-body-lg opacity-90">Consult with our engineering team to design your custom command center weighing solution.</p>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-surface-container-highest text-white font-label-md uppercase tracking-widest px-10 py-5 rounded-full hover:scale-105 transition-all">Download Catalog</button>
-<button class="bg-on-primary text-primary font-label-md uppercase tracking-widest px-10 py-5 rounded-full hover:scale-105 transition-all">Schedule Consultation</button>
-</div>
-</div>
+</div></section><!-- Premium CTA Section -->
+<section class="w-full relative overflow-hidden rounded-xl border border-white/5 bg-surface-container-high precision-grid">
+  <!-- Glassmorphism overlay for depth -->
+  <div class="absolute inset-0 bg-surface-glass backdrop-blur-sm z-0"></div>
+  <!-- Decorative corner accents -->
+  <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary z-10"></div>
+  <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary z-10"></div>
+  <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary z-10"></div>
+  <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary z-10"></div>
+  <div class="relative z-10 flex flex-col md:flex-row items-stretch md:items-center justify-between p-6 md:p-8 lg:p-12 gap-6 md:gap-12 w-full">
+    <!-- Column 1: Heritage -->
+    <div class="flex items-center gap-4 group flex-1">
+      <div class="w-12 h-12 rounded-full bg-surface border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors duration-300 shrink-0">
+        <span class="material-symbols-outlined text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+      </div>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-primary transition-colors duration-300">115+ YEARS</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Engineering Excellence</p>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="h-[1px] w-full md:w-[1px] md:h-16 bg-technical-line shrink-0"></div>
+    <!-- Column 2: Reach -->
+    <div class="flex items-center gap-4 group flex-1">
+      <div class="w-12 h-12 rounded-full bg-surface border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors duration-300 shrink-0">
+        <span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+      </div>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-primary transition-colors duration-300">NATIONWIDE SERVICE</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Comprehensive Coverage</p>
+      </div>
+    </div>
+    <!-- Column 3: Action -->
+    <div class="flex-1 flex justify-start md:justify-end mt-4 md:mt-0">
+      <a class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full hover:bg-primary transition-all glow-hover active:scale-95 duration-200" href="#">
+        REQUEST A SITE VISIT
+        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- Trust Hub: Hero Section -->
@@ -1167,96 +1252,28 @@
 </div>
 </div>
 </section>
-<!-- Final Conversion Section -->
-<section class="relative bg-surface-container-lowest border-t border-surface-variant">
-<!-- Background Image with Overlay -->
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Atmospheric industrial background for a final conversion section. A vast, dark chemical process plant or tank farm at twilight. Cinematic red and black gradient overlay, glowing status lights, and deep technical depth. World-class engineering prestige setting the stage for lead generation." style="background-image: url('./assets/images/Picture3.jpg');"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/90 to-surface-container-lowest/40 mix-blend-multiply"></div>
-<div class="absolute inset-0 bg-surface-container-lowest/60"></div>
+<!-- New CTA Section -->
+<section class="w-full max-w-container-max mx-auto relative rounded-xl overflow-hidden border border-white/10 max-h-[400px] bg-surface-container-low shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] my-24" data-alt="A cinematic, low-key view of an industrial plant at dusk or dawn. The complex is composed of towering cylindrical silos, complex intersecting pipelines, and structural scaffolding, all rendered in dark, metallic tones. A subtle but distinct reddish-orange rim light catches the edges of the metal structures, hinting at a hidden light source or a fiery sunset. The scene is atmospheric with a faint haze, emphasizing a high-tech, precise, and powerful industrial corporate aesthetic, consistent with a dark mode 'Industrial Precision' style." style="background-image: linear-gradient(to right, rgba(18, 20, 22, 0.95) 40%, rgba(18, 20, 22, 0.4) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8ZSVFzpK_hDA7XVQ_MpOseQ3bM6tssk0OJrS4cGRH7SdmpMSkhDuO93JwBy3rOissMIMQJcobbEqzOOD-f9Hzkjm71oXosoGAznBn0v8Tz8BtCLCKRkXT8TeSGFhp-zOTlP1f8O20z1WvU1C2e0ngdktAyYDB3MJKFfeXQmDirqzraZ0jwiI7C8EKuIVCGGf9D6cstWCW4aX0XQAXRuPtXutsefo09taWSk_X6dm8ZKdnnngr6ixr73buB4xysa3JIp6P-EHpFdQ'); background-size: cover; background-position: center right;">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-0"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center w-full h-full min-h-[320px] p-8 md:p-12 gap-8 md:gap-16">
+<!-- Left Side: Copy (60%) -->
+<div class="flex-1 md:w-[60%] flex flex-col justify-center space-y-4">
+<h2 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface">
+                        Ready to Improve Process Accuracy &amp; <span class="text-primary">Operational Efficiency</span>?
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Leverage Avery India's precision engineering and industrial-grade solutions to optimize your facility's performance and ensure compliance.
+                    </p>
 </div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32 relative z-10 flex flex-col md:flex-row gap-16 lg:gap-24">
-<!-- Content Left -->
-<div class="flex-1 flex flex-col justify-center">
-<span class="inline-block px-4 py-2 bg-primary-container/10 border border-primary-container/30 text-primary-fixed font-label-md text-label-md uppercase tracking-widest rounded-full mb-8 w-fit shadow-[0_0_15px_rgba(255,84,75,0.2)]">Global Expertise</span>
-<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6 uppercase tracking-tight leading-tight">Talk To Our Process Weighing <span class="text-primary-container">Specialists</span> Today</h2>
-<p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-12 max-w-xl">Deploy our engineering intelligence to resolve your most complex measurement challenges. Precise data starts with precise infrastructure.</p>
-<!-- Benefits Strip -->
-<div class="grid grid-cols-2 gap-8 mt-auto">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 0;">my_location</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase text-on-surface mb-1">Absolute Accuracy</h4>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">OIML certified precision</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 0;">speed</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase text-on-surface mb-1">High Efficiency</h4>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Optimized throughput</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 0;">recycling</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase text-on-surface mb-1">Waste Reduction</h4>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Material control</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-container text-3xl" style="font-variation-settings: 'FILL' 0;">insights</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase text-on-surface mb-1">Peak Performance</h4>
-<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Analytics integration</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Form Right -->
-<div class="flex-1 max-w-lg w-full md:ml-auto">
-<div class="bg-surface-container/40 backdrop-blur-md border border-outline-variant/30 rounded-xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
-<!-- Technical accent lines -->
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-50"></div>
-<div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-container/40"></div>
-<div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-container/40"></div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-8 uppercase tracking-wide">Request Engineering Consultation</h3>
-<form class="space-y-6">
-<div class="grid grid-cols-2 gap-6">
-<div class="relative">
-<input class="w-full bg-surface-container-low/80 text-on-surface border-0 form-input-bottom-border px-4 py-3 font-body-md peer placeholder-transparent focus:bg-surface-container-low" id="firstName" placeholder="First Name" required="" type="text"/>
-<label class="absolute left-4 -top-2.5 text-secondary-fixed-dim font-label-sm text-label-sm uppercase bg-surface-container-low px-1 transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-label-sm peer-focus:bg-surface-container-low peer-focus:text-primary-container" for="firstName">First Name</label>
-</div>
-<div class="relative">
-<input class="w-full bg-surface-container-low/80 text-on-surface border-0 form-input-bottom-border px-4 py-3 font-body-md peer placeholder-transparent focus:bg-surface-container-low" id="lastName" placeholder="Last Name" required="" type="text"/>
-<label class="absolute left-4 -top-2.5 text-secondary-fixed-dim font-label-sm text-label-sm uppercase bg-surface-container-low px-1 transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-label-sm peer-focus:bg-surface-container-low peer-focus:text-primary-container" for="lastName">Last Name</label>
-</div>
-</div>
-<div class="relative">
-<input class="w-full bg-surface-container-low/80 text-on-surface border-0 form-input-bottom-border px-4 py-3 font-body-md peer placeholder-transparent focus:bg-surface-container-low" id="email" placeholder="Corporate Email" required="" type="email"/>
-<label class="absolute left-4 -top-2.5 text-secondary-fixed-dim font-label-sm text-label-sm uppercase bg-surface-container-low px-1 transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-label-sm peer-focus:bg-surface-container-low peer-focus:text-primary-container" for="email">Corporate Email</label>
-</div>
-<div class="relative">
-<input class="w-full bg-surface-container-low/80 text-on-surface border-0 form-input-bottom-border px-4 py-3 font-body-md peer placeholder-transparent focus:bg-surface-container-low" id="company" placeholder="Company / Organization" required="" type="text"/>
-<label class="absolute left-4 -top-2.5 text-secondary-fixed-dim font-label-sm text-label-sm uppercase bg-surface-container-low px-1 transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3.5 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-label-sm peer-focus:bg-surface-container-low peer-focus:text-primary-container" for="company">Company / Organization</label>
-</div>
-<div class="relative">
-<select class="w-full bg-surface-container-low/80 text-on-surface border-0 form-input-bottom-border px-4 py-3 font-body-md focus:bg-surface-container-low appearance-none cursor-pointer" id="industry">
-<option class="text-secondary-fixed-dim" disabled="" selected="" value="">Select Primary Industry</option>
-<option value="logistics">Logistics &amp; Transport</option>
-<option value="manufacturing">Heavy Manufacturing</option>
-<option value="chemical">Chemical &amp; Process</option>
-<option value="mining">Mining &amp; Aggregates</option>
-</select>
-<span class="material-symbols-outlined absolute right-4 top-3.5 text-secondary-fixed-dim pointer-events-none">arrow_drop_down</span>
-</div>
-<button class="w-full mt-8 bg-primary-container text-white py-4 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-inverse-primary transition-colors duration-300 flex justify-center items-center gap-2 group" type="submit">
-                                Enquire Now
-                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<!-- Right Side: Actions (40%) -->
+<div class="w-full md:w-[40%] flex flex-col sm:flex-row md:flex-col gap-4 justify-center items-start md:items-end">
+<button class="w-full sm:w-auto md:w-full max-w-[280px] bg-primary text-white font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-full hover:bg-[#d64a42] transition-colors duration-300 flex items-center justify-center gap-2 group">
+                        GET A FREE CONSULTATION
+                        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </button>
-<p class="text-center font-label-sm text-label-sm text-secondary-fixed-dim mt-4 uppercase tracking-wider">Secure SSL Connection. Data strictly confidential.</p>
-</form>
-</div>
+<button class="w-full sm:w-auto md:w-full max-w-[280px] bg-transparent border border-white/20 text-on-surface font-label-md text-label-md uppercase tracking-wider px-8 py-4 rounded-full hover:bg-white/5 transition-colors duration-300 flex items-center justify-center">
+                        REQUEST SITE VISIT
+                    </button>
 </div>
 </div>
 </section>
@@ -1396,7 +1413,7 @@
 
 <!-- Sticky CTA -->
 <div class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex flex-col gap-3">
-    <a href="#" class="bg-primary text-white px-6 py-3 rounded-full font-label-md uppercase shadow-[0_4px_20px_rgba(230,57,70,0.4)] hover:bg-primary-container transition-all hover:scale-105 flex items-center justify-center gap-2">
+    <a href="#" class="hidden md:flex bg-primary text-white px-6 py-3 rounded-full font-label-md uppercase shadow-[0_4px_20px_rgba(230,57,70,0.4)] hover:bg-primary-container transition-all hover:scale-105 items-center justify-center gap-2">
         <span class="material-symbols-outlined text-[20px]">request_quote</span>
         Get a Quote
     </a>
