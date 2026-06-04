@@ -1355,6 +1355,7 @@
             }
         }
 
+        // Pagination sync and interactive effects
         if (slider && dots) {
             slider.addEventListener('scroll', () => {
                 const index = Math.round(slider.scrollLeft / 624);
@@ -1380,6 +1381,16 @@
                     }
                 });
             });
+
+            // Automatic sliding every 4 seconds (desktop and mobile)
+            const autoInterval = setInterval(() => {
+                // If at or near the end, loop back to start
+                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: 624, behavior: 'smooth' });
+                }
+            }, 4000);
         }
     </script>
 
