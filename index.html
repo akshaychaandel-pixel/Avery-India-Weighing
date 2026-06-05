@@ -335,7 +335,7 @@
 </style></head>
 <body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
 <!-- TopNavBar -->
-<header class="w-full absolute top-0 left-0 z-50 bg-transparent border-b border-white/10 animate-in fade-in slide-in-from-top duration-1000">
+<header class="w-full border-b border-gray-200 bg-black/60 backdrop-blur" style="background: none;">
 <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <!-- Logo -->
 <a class="shrink-0 flex items-center" href="#">
@@ -382,18 +382,13 @@
 </div>
 <div class="flex flex-col sm:flex-row gap-4 pt-4"><button class="w-full md:w-auto bg-primary-container text-on-primary-container font-label-md text-label-md uppercase px-8 py-4 rounded-full hover:bg-primary-container/90 transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(255,84,75,0.4)] transition-all duration-300 order-1">Get a Quote <span class="material-symbols-outlined text-[20px]">arrow_forward</span></button><button class="w-full md:w-auto bg-transparent border border-white/20 text-on-background font-label-md text-label-md uppercase px-8 py-4 rounded-full hover:bg-white/5 transition-colors duration-200 active:scale-95 flex items-center justify-center hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300 order-2">Enquire Now</button></div>
 </div>
-<!-- Right Side Empty Canvas for Visual Balance -->
-<div class="w-full md:w-1/2 hidden md:block">
-<!-- Minimalist structural accents could go here, keeping it clean per request -->
-</div>
 </div>
 <!-- Trust Indicators Strip -->
 <div class="absolute bottom-0 left-0 w-full glass-panel z-20 hidden md:block border-x-0 border-b-0 border-t animate-in fade-in slide-in-from-bottom duration-700 delay-500 fill-mode-both">
 <div class="max-w-container-max mx-auto px-margin-desktop py-6 flex justify-between items-center"><div class="grid grid-cols-6 gap-4 w-full"><div class="text-center flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">schedule</span><div><p class="font-headline-md text-primary">115+</p><p class="font-label-sm text-on-surface-variant">Years in India</p></div></div><div class="text-center border-l border-white/10 flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">public</span><div><p class="font-headline-md text-primary">200+</p><p class="font-label-sm text-on-surface-variant">Global Expertise</p></div></div><div class="text-center border-l border-white/10 flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">verified</span><div><p class="font-headline-md text-primary">ISO</p><p class="font-label-sm text-on-surface-variant">Certified Mfg</p></div></div><div class="text-center border-l border-white/10 flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">location_on</span><div><p class="font-headline-md text-primary">58+</p><p class="font-label-sm text-on-surface-variant">Service Locations</p></div></div><div class="text-center border-l border-white/10 flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">precision_manufacturing</span><div><p class="font-headline-md text-primary">10,000+</p><p class="font-label-sm text-on-surface-variant">Installations</p></div></div><div class="text-center border-l border-white/10 flex flex-col items-center gap-2"><span class="material-symbols-outlined text-primary text-3xl animate-draw">check_circle</span><div><p class="font-headline-md text-primary">99%+</p><p class="font-label-sm text-on-surface-variant">Reliability</p></div></div></div></div>
 </div>
 </section>
-<!-- Mobile Trust Indicators (Visible only on mobile) -->
-<section class="md:hidden absolute bottom-0 left-0 w-full glass-panel z-20 border-t border-white/10"><div class="scroll-container py-4"><div class="animate-scroll flex items-center gap-8 px-4"><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">schedule</span><span class="font-label-sm text-primary">115+ Years</span></div><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">public</span><span class="font-label-sm text-primary">200+ Global</span></div><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">verified</span><span class="font-label-sm text-primary">ISO Certified</span></div><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">location_on</span><span class="font-label-sm text-primary">58+ Locations</span></div><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">precision_manufacturing</span><span class="font-label-sm text-primary">10K+ Installs</span></div><div class="flex items-center gap-2 shrink-0"><span class="material-symbols-outlined text-primary text-xl">check_circle</span><span class="font-label-sm text-primary">99%+ Reliability</span></div></div></div></section>
+
 
 <!-- Expert Consultation Section -->
 <section class="relative z-10 flex flex-col justify-center py-24 px-margin-mobile md:px-margin-desktop">
@@ -443,23 +438,6 @@
         <div class="relative">
             <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">domain</span>
             <input class="w-full bg-surface-dim/50 border border-white/10 rounded-lg pl-9 py-2.5 text-body-sm font-body-sm text-on-surface placeholder:text-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="company" name="company" placeholder="Acme Corp" required="" type="text"/>
-        </div>
-    </div>
-    <!-- Industry -->
-    <div class="flex flex-col relative group">
-        <label class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mb-1" for="industry">Industry *</label>
-        <div class="relative">
-            <select class="w-full bg-surface-dim/50 border border-white/10 rounded-lg py-2.5 pl-3 pr-8 text-body-sm font-body-sm text-on-surface appearance-none cursor-pointer focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-inner outline-none relative z-0" id="industry" name="industry" required>
-                <option class="bg-surface-container-high text-on-surface-variant" disabled="" selected="" value="">Select Industry</option>
-                <option class="bg-surface-container-high text-on-surface" value="Steel & Metal">Steel & Metal</option>
-                <option class="bg-surface-container-high text-on-surface" value="Chemical">Chemical</option>
-                <option class="bg-surface-container-high text-on-surface" value="Pharmaceutical">Pharmaceutical</option>
-                <option class="bg-surface-container-high text-on-surface" value="Cement">Cement</option>
-                <option class="bg-surface-container-high text-on-surface" value="Food & Beverage">Food & Beverage</option>
-                <option class="bg-surface-container-high text-on-surface" value="Manufacturing">Manufacturing</option>
-                <option class="bg-surface-container-high text-on-surface" value="Other">Other</option>
-            </select>
-            <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none group-focus-within:text-primary transition-colors z-10 text-[18px]">arrow_drop_down</span>
         </div>
     </div>
     <!-- State -->
@@ -519,6 +497,49 @@
 </div>
 </div>
 </section>
+
+
+  
+  
+
+
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.querySelector('.snap-x');
+      const indicators = document.querySelectorAll('.md\\:hidden .rounded-full');
+      if(slider && indicators.length > 0) {
+        slider.addEventListener('scroll', () => {
+          const scrollLeft = slider.scrollLeft;
+          const cardWidth = slider.querySelector('div').offsetWidth;
+          const index = Math.round(scrollLeft / cardWidth);
+          indicators.forEach((ind, i) => {
+            if(i === index) {
+              ind.classList.remove('bg-gray-300');
+              ind.classList.add('bg-[#b81f20]');
+            } else {
+              ind.classList.remove('bg-[#b81f20]');
+              ind.classList.add('bg-gray-300');
+            }
+          });
+        });
+      }
+    });
+  </script>
+</section>
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+
 
 <!-- Hero Title Section -->
 <section class="py-24 px-margin-desktop text-center bg-background">
@@ -704,106 +725,6 @@
 </div>
 </section>
 </div>
-<!-- Hero Section: Command Center Integration -->
-<section class="relative min-h-[80vh] flex flex-col items-center justify-center technical-grid px-margin-desktop py-8">
-<div class="max-w-container mx-auto w-full text-center mb-12">
-<span class="text-label-sm font-label-sm text-primary uppercase tracking-[0.3em] mb-4 block">Precision Engineering</span>
-<h1 class="text-headline-xl font-headline-xl mb-6">How Process Weighing Works</h1>
-<p class="text-body-lg text-secondary-fixed max-w-2xl mx-auto">Seamless integration of hardware and software, transforming raw material data into actionable enterprise intelligence.</p><div class="mt-12 mb-12 mx-auto max-w-5xl px-4">
-<div class="glass-panel rounded-lg p-2 border border-primary/20 relative group overflow-hidden">
-<!-- Corner Accents -->
-<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary opacity-60"></div>
-<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary opacity-60"></div>
-<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary opacity-60"></div>
-<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary opacity-60"></div>
-<!-- Image Container with Glow -->
-<div class="relative rounded overflow-hidden bg-surface-container-lowest/50">
-<img alt="Process Weighing Diagram" class="w-full h-auto block transition-all duration-500 group-hover:scale-[1.02]" src="./assets/images/P3.png"/>
-<div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(255,84,75,0.05)]"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Interactive Flow Diagram -->
-<div class="w-full max-w-container mx-auto relative h-[500px] hidden lg:block">
-<svg class="absolute inset-0 w-full h-full" fill="none" viewbox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
-<!-- Flow Paths -->
-<path class="flow-line stroke-primary/30" d="M100 200 H1100" stroke-width="2"></path>
-<!-- Nodes connection vertical spikes -->
-<path d="M150 200 V160 M300 200 V240 M450 200 V160 M600 200 V240 M750 200 V160 M900 200 V240 M1050 200 V160" stroke="rgba(255,180,171,0.2)" stroke-dasharray="4 4" stroke-width="1"></path>
-</svg>
-<div class="absolute inset-0 flex justify-between items-center px-4">
-<!-- Node 1: Material Source -->
-<div class="flex flex-col items-center group cursor-pointer">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">propane_tank</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">Material Source<br/><span class="text-secondary-container text-[10px]">(Tank/Vessel)</span></p>
-</div>
-<!-- Node 2: Load Cells -->
-<div class="flex flex-col items-center group cursor-pointer translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">sensors</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">Avery Load Cells<br/><span class="text-secondary-container text-[10px]">(Precision Input)</span></p>
-</div>
-<!-- Node 3: Junction Box -->
-<div class="flex flex-col items-center group cursor-pointer -translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">Junction Box<br/><span class="text-secondary-container text-[10px]">(Signal Summing)</span></p>
-</div>
-<!-- Node 4: Indicator -->
-<div class="flex flex-col items-center group cursor-pointer translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">settings_input_component</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">Digital Indicator<br/><span class="text-secondary-container text-[10px]">(Analog to Digital)</span></p>
-</div>
-<!-- Node 5: PLC -->
-<div class="flex flex-col items-center group cursor-pointer -translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">memory</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">PLC System<br/><span class="text-secondary-container text-[10px]">(Process Control)</span></p>
-</div>
-<!-- Node 6: SCADA -->
-<div class="flex flex-col items-center group cursor-pointer translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">monitor_heart</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">SCADA/HMI<br/><span class="text-secondary-container text-[10px]">(Real-time Ops)</span></p>
-</div>
-<!-- Node 7: Cloud -->
-<div class="flex flex-col items-center group cursor-pointer -translate-y-12">
-<div class="w-20 h-20 glass-panel rounded-lg flex items-center justify-center border border-primary/20 group-hover:border-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">cloud_sync</span>
-</div>
-<p class="mt-4 text-label-sm uppercase tracking-tighter text-center">ERP/Cloud<br/><span class="text-secondary-container text-[10px]">(Big Data Analytics)</span></p>
-</div>
-</div>
-</div>
-<!-- Mobile Flow (Simple List) -->
-<div class="lg:hidden flex flex-col gap-6 w-full px-4">
-<div class="glass-panel p-4 rounded flex items-center gap-4">
-<span class="text-primary font-bold">01</span>
-<span class="text-label-md">Material Source</span>
-</div>
-<div class="glass-panel p-4 rounded flex items-center gap-4 border-l-2 border-primary">
-<span class="text-primary font-bold">02</span>
-<span class="text-label-md">Avery Load Cells</span>
-</div>
-<div class="glass-panel p-4 rounded flex items-center gap-4">
-<span class="text-primary font-bold">03</span>
-<span class="text-label-md">PLC &amp; Control Integration</span>
-</div>
-<div class="glass-panel p-4 rounded flex items-center gap-4">
-<span class="text-primary font-bold">04</span>
-<span class="text-label-md">ERP &amp; Cloud Analytics</span>
-</div>
-</div>
-</section>
 
 <!-- CTA Section -->
 <section class="py-gutter px-margin-desktop bg-surface"><div class="max-w-container mx-auto">
@@ -936,48 +857,6 @@
   </div>
 </section>
 
-<!-- Trust Hub: Hero Section -->
-<section class="relative pt-24 pb-16 px-margin-mobile md:px-margin-desktop grid-bg">
-<!-- Background Image Integration -->
-<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" data-alt="A highly technical industrial environment showcasing massive, precision-engineered metal machinery. The scene is dominated by deep steel grays and stark black shadows, illuminated by cool, high-tech blue utility lighting. The atmosphere conveys monumental scale, rigorous engineering standards, and robust reliability within a modern manufacturing facility. Cinematic depth of field focuses on metallic textures." style="background-image: url('./assets/images/P4.png'); background-size: cover; background-position: center;"></div>
-<div class="relative z-10 max-w-4xl text-center mx-auto">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Trusted by Industry Leaders</span>
-<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background mb-6">
-                    OVER A CENTURY OF PRECISION<br class="hidden md:block"/> WEIGHING EXCELLENCE
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    Delivering uncompromised accuracy and robust engineering for mission-critical industrial applications across India and globally.
-                </p>
-</div>
-<!-- HUD Metrics -->
-<div class="relative z-10 mt-16 grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 max-w-5xl mx-auto border-t border-surface-container-highest pt-8">
-<div class="text-center group">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">calendar_month</span>
-<h3 class="font-headline-lg text-headline-lg text-on-background">115+</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Years in India</p>
-</div>
-<div class="text-center group">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">language</span>
-<h3 class="font-headline-lg text-headline-lg text-on-background">200+</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Years Global Heritage</p>
-</div>
-<div class="text-center group col-span-2 md:col-span-1">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">factory</span>
-<h3 class="font-headline-lg text-headline-lg text-on-background text-primary">10,000+</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Industrial Installations</p>
-</div>
-<div class="text-center group">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">location_on</span>
-<h3 class="font-headline-lg text-headline-lg text-on-background">58+</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Service Locations</p>
-</div>
-<div class="text-center group">
-<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">engineering</span>
-<h3 class="font-headline-lg text-headline-lg text-on-background">135+</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Service Engineers</p>
-</div>
-</div>
-</section>
 <!-- Why Customers Trust Us -->
 <section class="py-20 px-margin-mobile md:px-margin-desktop relative z-20">
 <h2 class="font-headline-md text-headline-md text-center text-on-background mb-12 uppercase tracking-wide">Why Customers Trust Us</h2>
