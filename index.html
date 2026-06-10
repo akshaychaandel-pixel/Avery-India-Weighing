@@ -372,7 +372,7 @@
 }
 .mobile-slide-track {
     display: flex;
-    width: 200%;
+    width: max-content;
     animation: slide-left 20s linear infinite;
 }
 @media (min-width: 768px) {
@@ -383,71 +383,71 @@
     }
 }
 </style>
-<div class="absolute bottom-0 left-0 w-full bg-[#1a1c1b]/80 backdrop-blur-md z-20 border-t border-white/10 overflow-hidden">
-<div class="max-w-7xl mx-auto py-6 relative">
+<div class="absolute bottom-0 left-0 w-full bg-[#1a1c1b]/80 backdrop-blur-md z-20 border-t border-white/10 overflow-hidden py-4 md:py-6">
+<div class="max-w-7xl mx-auto relative">
     <div class="mobile-slide-track md:grid-cols-6 md:gap-4 md:px-8">
         <!-- Original Set -->
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">schedule</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">115+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Years in India</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">schedule</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">115+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Years in India</p>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">public</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">200+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Global Expertise</p>
+        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">public</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">200+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Global Expertise</p>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">verified</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">ISO</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Certified Mfg</p>
+        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">verified</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">ISO</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Certified Mfg</p>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">location_on</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">58+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Service Locations</p>
+        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">location_on</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">58+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Service Locations</p>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">precision_manufacturing</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">10k+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Installations</p>
+        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">precision_manufacturing</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">10k+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Installations</p>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-1/6 md:w-full">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">check_circle</span>
-            <p class="text-[24px] md:text-[32px] font-bold text-white leading-none">99%+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest mt-1">Reliability</p>
+        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">check_circle</span>
+            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">99%+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Reliability</p>
         </div>
         
         <!-- Duplicated Set for Seamless Mobile Scrolling (hidden on desktop) -->
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">schedule</span>
-            <p class="text-[24px] font-bold text-white leading-none">115+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Years in India</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">schedule</span>
+            <p class="text-[28px] font-bold text-white leading-none">115+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Years in India</p>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">public</span>
-            <p class="text-[24px] font-bold text-white leading-none">200+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Global Expertise</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">public</span>
+            <p class="text-[28px] font-bold text-white leading-none">200+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Global Expertise</p>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">verified</span>
-            <p class="text-[24px] font-bold text-white leading-none">ISO</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Certified Mfg</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">verified</span>
+            <p class="text-[28px] font-bold text-white leading-none">ISO</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Certified Mfg</p>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">location_on</span>
-            <p class="text-[24px] font-bold text-white leading-none">58+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Service Locations</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">location_on</span>
+            <p class="text-[28px] font-bold text-white leading-none">58+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Service Locations</p>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">precision_manufacturing</span>
-            <p class="text-[24px] font-bold text-white leading-none">10k+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Installations</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">precision_manufacturing</span>
+            <p class="text-[28px] font-bold text-white leading-none">10k+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Installations</p>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-1/6 md:hidden">
-            <span class="material-symbols-outlined text-white/60 text-[20px] mb-1">check_circle</span>
-            <p class="text-[24px] font-bold text-white leading-none">99%+</p>
-            <p class="font-['Inter'] text-white/70 text-[10px] uppercase tracking-widest mt-1">Reliability</p>
+        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
+            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">check_circle</span>
+            <p class="text-[28px] font-bold text-white leading-none">99%+</p>
+            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Reliability</p>
         </div>
     </div>
 </div>
