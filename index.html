@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span:not(.material-symbols-outlined), div, button, input, textarea, label, li {
+        font-family: 'Inter', sans-serif !important;
+    }
+</style>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -333,34 +338,33 @@
 </a>
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary duration-200" href="#">Solutions</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform" href="#">Industries</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform" href="#">Products</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform" href="#">Service &amp; Support</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform" href="#">About Us</a>
+<a onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="cursor-pointer font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform">Products</a>
+<a onclick="document.getElementById('solutions').scrollIntoView({behavior: 'smooth'})" class="cursor-pointer font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform">Solutions</a>
+<a onclick="document.getElementById('industries').scrollIntoView({behavior: 'smooth'})" class="cursor-pointer font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform">Industries</a>
+<a onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="cursor-pointer font-label-md text-label-md uppercase tracking-wider text-on-background/80 hover:text-primary transition-colors duration-200 active:scale-95 transition-transform">Contact Us</a>
 </nav>
 </div>
 </header>
 <!-- Main Content -->
 <main class="flex-grow relative flex flex-col">
 <!-- Hero Section -->
-<section class="relative flex-grow flex flex-col justify-center overflow-hidden bg-surface-container-lowest perspective-[1000px] min-h-screen">
+<section class="relative flex-grow flex flex-col justify-center overflow-hidden bg-surface-container-lowest perspective-[1000px] min-h-[50vh] md:min-h-screen">
 <!-- Background Image -->
 <div class="absolute inset-0 z-0 transform-gpu translate-z-[-10px] scale-110 origin-top">
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
 <img alt="Engineered for Absolute Precision Hero Background" class="w-full h-full object-cover object-[center_top] md:object-[right_15%] opacity-80 animate-ken-burns" src="./assets/images/ChatGPT Image Jun 3, 2026, 05_51_54 PM.png"/>
 </div>
-<div class="relative z-10 w-full px-4 md:px-12 max-w-[1440px] mx-auto pt-40 pb-48 md:pb-56 flex flex-col justify-center transform-gpu translate-z-[10px]">
+<div class="relative z-10 w-full px-4 md:px-12 max-w-[1440px] mx-auto pt-28 pb-32 md:pt-40 md:pb-56 flex flex-col justify-center transform-gpu translate-z-[10px]">
 <!-- Hero Content Area -->
-<div class="w-full max-w-2xl flex flex-col gap-8 glass-panel p-6 sm:p-8 rounded-2xl md:bg-transparent md:border-none md:backdrop-blur-none bg-background/40 backdrop-blur-md border-white/20">
+<div class="w-full max-w-2xl flex flex-col gap-8 glass-panel p-6 sm:p-8 rounded-md md:bg-transparent md:border-none md:backdrop-blur-none bg-background/40 backdrop-blur-md border-white/20">
 <div class="flex flex-col gap-4">
 <span class="font-label-md text-label-md text-primary tracking-[0.2em] uppercase flex items-center gap-2"><span class="w-8 h-[2px] bg-primary"></span>Avery India | Process Weighing Solutions</span>
 <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background max-w-2xl leading-tight animate-in fade-in slide-in-from-bottom duration-1000 fill-mode-both">Process Control. <br/> Reduced Waste. <br/> <span class="text-primary">Operational Efficiency.</span></h1>
 <p class="font-body-lg text-body-lg text-white/90 max-w-xl">From process weighing and batching systems to custom industrial automation, Avery India helps manufacturers improve accuracy, reduce losses, and optimize production efficiency.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-    <button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="w-full md:w-auto bg-[#ae0011] text-white font-label-md text-[14px] font-bold uppercase px-8 py-4 rounded-full hover:bg-[#d71920] transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2 shadow-lg transition-all duration-300 order-1 tracking-widest">Enquire Now <span class="material-symbols-outlined text-[20px]">arrow_forward</span></button>
-    <button class="w-full md:w-auto bg-transparent border-2 border-white/50 text-white font-label-md text-[14px] font-bold uppercase px-8 py-4 rounded-full hover:bg-white/10 hover:border-white transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2 transition-all duration-300 order-2 tracking-widest">Explore Solutions</button>
+    <button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="w-full md:w-auto bg-[#ae0011] text-white font-label-md text-[14px] font-bold uppercase px-8 py-4 rounded-full hover:bg-[#d71920] transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2 shadow-lg transition-all duration-300 order-1 tracking-widest">Enquire Now <span class="material-symbols-outlined text-[20px]">arrow_forward</span></button>
+    <button onclick="document.getElementById('solutions').scrollIntoView({behavior: 'smooth'})" class="w-full md:w-auto bg-transparent border-2 border-white/50 text-white font-label-md text-[14px] font-bold uppercase px-8 py-4 rounded-full hover:bg-white/10 hover:border-white transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2 transition-all duration-300 order-2 tracking-widest">Explore Solutions</button>
 </div>
 </div>
 </div>
@@ -385,69 +389,77 @@
 </style>
 <div class="absolute bottom-0 left-0 w-full bg-[#1a1c1b]/80 backdrop-blur-md z-20 border-t border-white/10 overflow-hidden py-4 md:py-6">
 <div class="max-w-7xl mx-auto relative">
-    <div class="mobile-slide-track md:grid-cols-6 md:gap-4 md:px-8">
+    <div class="mobile-slide-track flex-wrap md:grid-cols-6 md:gap-4 md:px-8">
         <!-- Original Set -->
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">schedule</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">115+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Years in India</p>
+        <div class="flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px]">schedule</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[28px] md:text-[32px] font-bold text-white leading-none mb-1">115+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Years in India</p>
+            </div>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">public</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">200+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Global Expertise</p>
+        <div class="md:border-l border-white/10 flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px]">public</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[28px] md:text-[32px] font-bold text-white leading-none mb-1">200+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Global Expertise</p>
+            </div>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">verified</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">ISO</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Certified Mfg</p>
+        <div class="md:border-l border-white/10 flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[24px]">verified</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[28px] md:text-[32px] font-bold text-white leading-none mb-1">ISO</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Certified Mfg</p>
+            </div>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">location_on</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">58+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Service Locations</p>
+        <div class="md:border-l border-white/10 flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[32px]">location_on</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[24px] md:text-[28px] font-bold text-white leading-none mb-1">58+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Service Locations</p>
+            </div>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">precision_manufacturing</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">10k+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Installations</p>
+        <div class="md:border-l border-white/10 flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[32px]">precision_manufacturing</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[24px] md:text-[28px] font-bold text-white leading-none mb-1">10k+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Installations</p>
+            </div>
         </div>
-        <div class="text-center md:border-l border-white/10 flex flex-col items-center justify-center gap-1 w-[160px] md:w-full flex-shrink-0 px-4 md:px-0">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">check_circle</span>
-            <p class="text-[28px] md:text-[32px] font-bold text-white leading-none">99%+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] md:text-[11px] uppercase tracking-widest mt-1 text-center">Reliability</p>
+        <div class="md:border-l border-white/10 flex items-center justify-center gap-3 md:w-full flex-shrink-0 px-8 md:px-0">
+            <span class="material-symbols-outlined text-white/60 text-[32px]">check_circle</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[24px] md:text-[28px] font-bold text-white leading-none mb-1">99%+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Reliability</p>
+            </div>
         </div>
-        
-        <!-- Duplicated Set for Seamless Mobile Scrolling (hidden on desktop) -->
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">schedule</span>
-            <p class="text-[28px] font-bold text-white leading-none">115+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Years in India</p>
+        <div class="flex items-center justify-center gap-3 md:hidden flex-shrink-0 px-8">
+            <span class="material-symbols-outlined text-white/60 text-[24px]">verified</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[28px] md:text-[32px] font-bold text-white leading-none mb-1">ISO</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Certified Mfg</p>
+            </div>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">public</span>
-            <p class="text-[28px] font-bold text-white leading-none">200+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Global Expertise</p>
+        <div class="flex items-center justify-center gap-3 md:hidden flex-shrink-0 px-8">
+            <span class="material-symbols-outlined text-white/60 text-[24px]">location_on</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[28px] md:text-[32px] font-bold text-white leading-none mb-1">58+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Service Locations</p>
+            </div>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">verified</span>
-            <p class="text-[28px] font-bold text-white leading-none">ISO</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Certified Mfg</p>
+        <div class="flex items-center justify-center gap-3 md:hidden flex-shrink-0 px-8">
+            <span class="material-symbols-outlined text-white/60 text-[32px]">precision_manufacturing</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[24px] md:text-[28px] font-bold text-white leading-none mb-1">10k+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Installations</p>
+            </div>
         </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">location_on</span>
-            <p class="text-[28px] font-bold text-white leading-none">58+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Service Locations</p>
-        </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">precision_manufacturing</span>
-            <p class="text-[28px] font-bold text-white leading-none">10k+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Installations</p>
-        </div>
-        <div class="text-center flex flex-col items-center justify-center gap-1 w-[160px] md:hidden flex-shrink-0 px-4">
-            <span class="material-symbols-outlined text-white/60 text-[24px] mb-1">check_circle</span>
-            <p class="text-[28px] font-bold text-white leading-none">99%+</p>
-            <p class="font-['Inter'] text-white/70 text-[11px] uppercase tracking-widest mt-1 text-center">Reliability</p>
+        <div class="flex items-center justify-center gap-3 md:hidden flex-shrink-0 px-8">
+            <span class="material-symbols-outlined text-white/60 text-[32px]">check_circle</span>
+            <div class="flex flex-col items-start">
+                <p class="text-[24px] md:text-[28px] font-bold text-white leading-none mb-1">99%+</p>
+                <p class="font-['Inter'] text-white/70 text-[10px] md:text-[11px] uppercase tracking-widest leading-none">Reliability</p>
+            </div>
         </div>
     </div>
 </div>
@@ -557,111 +569,129 @@
     transform: translateY(-2px);
   }
 </style>
-<section class="relative overflow-x-hidden w-full" style="background-color: #fff8f7; background-image: radial-gradient(circle at 0% 0%, rgba(0,0,0,0.03) 1px, transparent 1px), radial-gradient(circle at 100% 100%, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 20px 20px;">
+<<section id="products" class="relative overflow-x-hidden w-full" style="background-color: #f7f7f7; background-image: radial-gradient(circle at 0% 0%, rgba(0,0,0,0.03) 1px, transparent 1px), radial-gradient(circle at 100% 100%, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 20px 20px;">
   <div class="absolute inset-0 pwb-noise-bg"></div>
   <div class="relative z-10 w-full max-w-[1280px] mx-auto px-[32px] py-[80px]">
     <div class="flex flex-col lg:flex-row gap-[80px] lg:gap-[48px] w-full mb-[80px]">
+      
       <!-- Left Side: Value Proposition (40%) -->
       <div class="w-full lg:w-[40%] flex flex-col justify-center pr-0 lg:pr-[48px] relative">
+        <!-- Red Accent Line -->
         <div class="absolute left-[-32px] top-[10%] w-[4px] h-[80%] bg-[#fcdbd7] opacity-50 hidden lg:block"></div>
         <div class="absolute left-[-32px] top-[40%] w-[4px] h-[20%] bg-[#ae0011] hidden lg:block"></div>
+        
         <div class="mb-[12px] inline-flex items-center gap-[4px] bg-[#ffe9e6] px-3 py-1.5 rounded-full w-fit">
-          <span class="material-symbols-outlined text-[#ae0011] text-[16px]" style="font-variation-settings: 'FILL' 1; font-size:16px;">precision_manufacturing</span>
-          <span class="font-['Inter'] text-[12px] font-medium tracking-widest text-[#ae0011] uppercase">WHY PROCESS WEIGHING</span>
+          <span class="material-symbols-outlined text-[#ae0011] text-[16px]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+          <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] uppercase tracking-widest">Why Choose Us</span>
         </div>
-        <h2 class="font-['Inter'] text-[48px] font-bold leading-[56px] tracking-[-0.02em] text-[#291715] mb-[24px]">
+        
+        <h1 class="font-['Inter'] text-[48px] leading-[56px] font-bold text-[#291715] mb-[24px] tracking-[-0.02em]">
           Improve Control.<br/>
           Reduce Waste.<br/>
           <span class="text-[#ae0011]">Increase Profitability.</span>
-        </h2>
-        <p class="font-['Inter'] text-[18px] leading-[28px] font-normal text-[#5d3f3c] max-w-md">
-          Our advanced process weighing systems are designed to deliver unmatched precision and durability in demanding industrial environments. Whether you're monitoring raw materials, controlling production processes, or ensuring quality, we provide solutions you can trust.
+        </h1>
+        
+        <p class="font-['Inter'] text-[18px] leading-[28px] text-[#5d3f3c] max-w-md">
+          Engineered for precision. Designed for durability. Our process weighing solutions integrate seamlessly into your manufacturing workflow, providing the critical data needed to optimize production and ensure uncompromising quality.
         </p>
+        
         <div class="mt-[48px] flex items-center gap-[12px]">
           <div class="h-[1px] w-12 bg-[#e6bdb8]"></div>
-          <span class="font-['Inter'] text-[12px] font-medium tracking-widest text-[#5d3f3c] uppercase">Industrial Grade Reliability</span>
+          <span class="font-['Inter'] text-[12px] font-medium text-[#5d3f3c] uppercase tracking-widest">Industrial Grade Reliability</span>
         </div>
+        
         <div class="mt-[24px] flex flex-col gap-[4px]">
-          <span class="font-['Inter'] text-[12px] font-medium tracking-widest text-[#5d3f3c] uppercase">Proven at 150+ Sites</span>
+          <span class="font-['Inter'] text-[12px] font-medium text-[#5d3f3c] uppercase tracking-widest">Proven at 150+ Sites</span>
           <div class="flex -space-x-2">
-            <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcT3hbPb_X2AujnT-oEctffeXrIN_CFW7zoTTw3xvHseA7IxkNMNz9BBulFHXWUkbv_GAj7PXPwHIWBnaqD6abXXUzIw52N9oB-ynhXnSP6h5qn-Hc36fEd4PKg9I4koOobEX1soyQeoVSPLqVDVSLfo8PoMZT1EJGw6PG84h5aIzfYN5cRHsIM1ku19gqHNSjdP9obOYCsEndLAApc0p35Mt7ZN3V9WRrwEUbu4PTuyLX-00LxXCAl5L7-HTOtsz0W7VA2gOgNA"/>
-            <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxgWmR77lI_t-RdVElbNp7t9HVrb2Y8xu1TN5Q1bbMrTnnRd1QBTDpyMKedgkHi4j1CRXBToh_fId-C9HXCEOUJNsLMxO46FKgbyi5YC2BZCPmFQ2S_40tOXkhRrQMt7yJEF13JuzD1bOBEaGcw0JCjGcgY9okLcq3cKHcViVlJrTAgIPkREI0f9fXnjXGUEWen7dIoULWGXPG0NSsHNsX_djUYyorfZmQiqWZQudsPLfhuOco2thaxMAMmehcusuHtblOTHcMw"/>
-            <img alt="Team Member" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7i4h5GK4BWOWVi0XMyF__6408rUFoE6FSg0WHGlRQS6vSmL5m1NegDmuq3KvfquYC_zqQNDzpmEQQ6Rae9-GIuN52j8BRwwiYRra5V3S5uvN8Kzj_AWgVzxbNg8blS5685SKJW7zgy-IaV4BcblnmZflyXdS12WCE8PBINsrQ6cQSbFl-phbqqC1QtytdEkuoEZjPnLq6WuMClSHZPg4CyAjU7199MvcDX08pJS6u0NH5AMtIUfJtfTeXK2Qs3jI7rwudbMyig"/>
+            <img alt="User" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFickLQuh3nk_9Hi_9gNDpdluGGQmwrbBG3adIektt9hZIYpxAh37o0KOTnJx-N-CcjvQQW7OOXtgHrFjwPJ4kvfn2ZZITvGvz4__pcHiWmzmeHfRa8QFMwli8p-8LfDjPQw3X6EiqqlvQ9BOPzyNgxo16fkf9pNooM65BrT6uTunOynHmMj9L_O6SP4j4m-HYuHJalGFZskX6kmDCWyOfU_BiKVbk_6kSWX08lKbp7_lZEXXLhsyVnpueNHgNYI9bLPdwUKxwhw"/>
+            <img alt="User" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI-GL6VEoEjatStfeYZhOlHwKvs7SEc_1t4i-wfGJrzGkJY633koiwPbyWns6VY5XKUHps_vLQbk0yEZTjXhPqyAAvboSdmtOXvnXGpXwxxL4wRPS1cQ_MO4G5iXvA2IDna194aktvHtlJXMX6rLqOHLw7B59rdFgGA944_pEsVWF8o163iohW_qO4NYmpIZffHrp1x-s6i49drbKe-gvq4_0hj-ffy9MsiGOyXJISiOWDgAhEqoxBUh31GQ34CZYFAf5uqdRWgw"/>
+            <img alt="User" class="w-8 h-8 rounded-full border-2 border-[#fff8f7] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKeXrg6tmloPnS8b1zbQ2iFi3MsHsD5iNMX1BkzM8eDeQbOd26aVH4XDOGBCPOKRhbjQT8ZEXQ1FTtOzbAfYsYe94It-s3U7wAlXoHUBWhjee18Hhmqm6tYf60aRIQFFsst5A7QtW3ZPtdmBP-zKG7DWWvBLugpx1QiCGZezCTjfAHzdZfTVlI4tiAHgx3BGzdzKpy-rl2HB55ilXJryJTEM2OuYuWvdj4rU_4XSd1Ur5kGIS3IhdQ-uIoYEnrjf0zoAv1WKJroQ"/>
             <div class="w-8 h-8 rounded-full border-2 border-[#fff8f7] bg-[#ffe9e6] flex items-center justify-center text-[12px] font-bold text-[#ae0011]">+</div>
           </div>
         </div>
       </div>
+      
       <!-- Right Side: Staggered Cards (60%) -->
       <div class="w-full lg:w-[60%] relative min-h-[500px] flex flex-col gap-[12px] lg:block mt-[48px] lg:mt-0">
-        <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" style="z-index:0;">
-          <line x1="15%" y1="10%" x2="55%" y2="25%" stroke="#e6bdb8" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="55%" y1="25%" x2="10%" y2="45%" stroke="#e6bdb8" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="10%" y1="45%" x2="50%" y2="65%" stroke="#e6bdb8" stroke-width="1" stroke-dasharray="4"/>
-          <line x1="50%" y1="65%" x2="20%" y2="85%" stroke="#e6bdb8" stroke-width="1" stroke-dasharray="4"/>
-          <circle cx="15%" cy="10%" r="4" fill="#ae0011"/>
-          <circle cx="55%" cy="25%" r="4" fill="#ae0011"/>
-          <circle cx="10%" cy="45%" r="4" fill="#ae0011"/>
-          <circle cx="50%" cy="65%" r="4" fill="#ae0011"/>
-          <circle cx="20%" cy="85%" r="4" fill="#ae0011"/>
-        </svg>
-        <div class="bg-[#fff8f7] rounded-[16px] p-[12px] border border-[#e6bdb8] pwb-card-shadow pwb-card-shadow-hover transition-all duration-300 w-full lg:w-[300px] lg:absolute lg:top-0 lg:left-[5%] z-10 flex items-start gap-[12px]">
-          <div class="bg-[#ffe9e6] p-2 rounded-lg flex-shrink-0"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">monitor_weight</span></div>
-          <div><h3 class="font-['Inter'] text-[20px] font-medium leading-[28px] text-[#291715] mb-[4px]">Process Control</h3><p class="font-['Inter'] text-[16px] leading-[24px] font-normal text-[#5d3f3c]">Real-time weight monitoring for better process control</p></div>
-        </div>
-        <div class="bg-[#fff8f7] rounded-[16px] p-[12px] border border-[#e6bdb8] pwb-card-shadow pwb-card-shadow-hover transition-all duration-300 w-full lg:w-[300px] lg:absolute lg:top-[20%] lg:left-[50%] z-10 flex items-start gap-[12px]">
-          <div class="bg-[#ffe9e6] p-2 rounded-lg flex-shrink-0"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">speed</span></div>
-          <div><h3 class="font-['Inter'] text-[20px] font-medium leading-[28px] text-[#291715] mb-[4px]">Operational Efficiency</h3><p class="font-['Inter'] text-[16px] leading-[24px] font-normal text-[#5d3f3c]">Increased operational efficiency</p></div>
-        </div>
-        <div class="bg-[#fff8f7] rounded-[16px] p-[12px] border border-[#e6bdb8] pwb-card-shadow pwb-card-shadow-hover transition-all duration-300 w-full lg:w-[300px] lg:absolute lg:top-[40%] lg:left-[0%] z-10 flex items-start gap-[12px]">
-          <div class="bg-[#ffe9e6] p-2 rounded-lg flex-shrink-0"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">delete_sweep</span></div>
-          <div><h3 class="font-['Inter'] text-[20px] font-medium leading-[28px] text-[#291715] mb-[4px]">Waste Reduction</h3><p class="font-['Inter'] text-[16px] leading-[24px] font-normal text-[#5d3f3c]">Reduced material wastage</p></div>
-        </div>
-        <div class="bg-[#fff8f7] rounded-[16px] p-[12px] border border-[#e6bdb8] pwb-card-shadow pwb-card-shadow-hover transition-all duration-300 w-full lg:w-[300px] lg:absolute lg:top-[60%] lg:left-[45%] z-10 flex items-start gap-[12px]">
-          <div class="bg-[#ffe9e6] p-2 rounded-lg flex-shrink-0"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">check_circle</span></div>
-          <div><h3 class="font-['Inter'] text-[20px] font-medium leading-[28px] text-[#291715] mb-[4px]">Product Consistency</h3><p class="font-['Inter'] text-[16px] leading-[24px] font-normal text-[#5d3f3c]">Improved product consistency</p></div>
-        </div>
-        <div class="bg-[#fff8f7] rounded-[16px] p-[12px] border border-[#e6bdb8] pwb-card-shadow pwb-card-shadow-hover transition-all duration-300 w-full lg:w-[300px] lg:absolute lg:top-[80%] lg:left-[10%] z-10 flex items-start gap-[12px]">
-          <div class="bg-[#ffe9e6] p-2 rounded-lg flex-shrink-0"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">build</span></div>
-          <div><h3 class="font-['Inter'] text-[20px] font-medium leading-[28px] text-[#291715] mb-[4px]">Long Lifecycle</h3><p class="font-['Inter'] text-[16px] leading-[24px] font-normal text-[#5d3f3c]">Low maintenance and long lifecycle</p></div>
+        <div class="relative p-6 border border-[#e6bdb8] rounded bg-[#ffffff] shadow-sm">
+          <!-- HUD Corner Brackets -->
+          <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#ae0011] -mt-1 -ml-1"></div>
+          <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#e6bdb8] -mt-1 -mr-1"></div>
+          <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#e6bdb8] -mb-1 -ml-1"></div>
+          <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#ae0011] -mb-1 -mr-1"></div>
+          
+          <div class="flex flex-col gap-[48px]">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-[12px]">
+                <div class="h-[2px] w-8 bg-[#ae0011]"></div>
+                <h2 class="font-['Inter'] text-[24px] font-semibold text-[#291715] uppercase tracking-widest">Our Key Benefits</h2>
+              </div>
+
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+              <!-- Benefit 01 -->
+              <div class="relative border border-[#e6bdb8] p-4 hover:border-[#ae0011] transition-all group bg-[#fff8f7]">
+                <div class="absolute top-0 left-0 w-2 h-2 bg-[#ae0011]"></div>
+                <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] opacity-70 block mb-[4px] tracking-widest">BENEFIT_01</span>
+                <h3 class="font-['Inter'] text-[20px] font-medium text-[#291715] mb-[4px] uppercase tracking-wider">Exact Measurement</h3>
+                <p class="font-['Inter'] text-[16px] text-[#5d3f3c]">Achieve unparalleled accuracy down to the gram.</p>
+              </div>
+              <!-- Benefit 02 -->
+              <div class="relative border border-[#e6bdb8] p-4 hover:border-[#ae0011] transition-all group bg-[#fff8f7]">
+                <div class="absolute top-0 left-0 w-2 h-2 bg-[#ae0011]"></div>
+                <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] opacity-70 block mb-[4px] tracking-widest">BENEFIT_02</span>
+                <h3 class="font-['Inter'] text-[20px] font-medium text-[#291715] mb-[4px] uppercase tracking-wider">Seamless Integration</h3>
+                <p class="font-['Inter'] text-[16px] text-[#5d3f3c]">Connects directly with your existing PLC and ERP.</p>
+              </div>
+              <!-- Benefit 03 -->
+              <div class="relative border border-[#e6bdb8] p-4 hover:border-[#ae0011] transition-all group bg-[#fff8f7]">
+                <div class="absolute top-0 left-0 w-2 h-2 bg-[#ae0011]"></div>
+                <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] opacity-70 block mb-[4px] tracking-widest">BENEFIT_03</span>
+                <h3 class="font-['Inter'] text-[20px] font-medium text-[#291715] mb-[4px] uppercase tracking-wider">Rugged Durability</h3>
+                <p class="font-['Inter'] text-[16px] text-[#5d3f3c]">Built to withstand harsh industrial environments.</p>
+              </div>
+              <!-- Benefit 04 -->
+              <div class="relative border border-[#e6bdb8] p-4 hover:border-[#ae0011] transition-all group bg-[#fff8f7]">
+                <div class="absolute top-0 left-0 w-2 h-2 bg-[#ae0011]"></div>
+                <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] opacity-70 block mb-[4px] tracking-widest">BENEFIT_04</span>
+                <h3 class="font-['Inter'] text-[20px] font-medium text-[#291715] mb-[4px] uppercase tracking-wider">Real-time Analytics</h3>
+                <p class="font-['Inter'] text-[16px] text-[#5d3f3c]">Actionable data insights to optimize batching.</p>
+              </div>
+              <!-- Benefit 05 -->
+              <div class="relative border border-[#e6bdb8] p-4 hover:border-[#ae0011] transition-all group bg-[#fff8f7]">
+                <div class="absolute top-0 left-0 w-2 h-2 bg-[#ae0011]"></div>
+                <span class="font-['Inter'] text-[12px] font-medium text-[#ae0011] opacity-70 block mb-[4px] tracking-widest">BENEFIT_05</span>
+                <h3 class="font-['Inter'] text-[20px] font-medium text-[#291715] mb-[4px] uppercase tracking-wider">Compliance Assured</h3>
+                <p class="font-['Inter'] text-[16px] text-[#5d3f3c]">Meets stringent international standards.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Micro-CTA Strip -->
-    <div class="w-full max-w-4xl mx-auto bg-[#fff0ee] rounded-full border border-[#e6bdb8] mt-[48px] flex flex-col md:flex-row items-center justify-between px-6 py-3 pwb-card-shadow relative overflow-hidden">
-      <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#291715 1px, transparent 1px); background-size: 16px 16px;"></div>
-      <div class="relative z-10 flex flex-col md:flex-row items-center gap-[12px] md:gap-[48px] w-full justify-between">
-        <div class="flex items-center gap-[12px]">
-          <span class="material-symbols-outlined text-[#ae0011] text-[20px]">engineering</span>
-          <h4 class="font-['Inter'] text-[14px] font-semibold leading-[20px] tracking-[0.05em] text-[#291715]">Ready to upgrade? <span class="font-['Inter'] text-[16px] font-normal text-[#5d3f3c] ml-2 hidden sm:inline">Consult with our team today.</span></h4>
-        </div>
-        <button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="bg-[#ae0011] text-white px-8 py-2 rounded-full font-['Inter'] text-[14px] font-semibold tracking-[0.05em] hover:bg-[#d71920] transition-all shadow-md flex items-center gap-[4px] whitespace-nowrap">Request Consultation <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
-      </div>
+      
     </div>
   </div>
 </section>
 
 
-<section class="w-full relative z-10 border-y border-[#e6bdb8]/30 overflow-hidden bg-[#ffffff]" style="background-image: linear-gradient(to right, rgba(209, 213, 219, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(209, 213, 219, 0.2) 1px, transparent 1px); background-size: 24px 24px;">
+<section id="solutions" class="w-full relative z-10 border-y border-[#e6bdb8]/30 overflow-hidden bg-[#f7f7f7]">
 <div class="flex-grow pt-[100px] md:pt-[120px] pb-[80px] px-[32px] max-w-7xl mx-auto w-full flex flex-col gap-[48px]">
 <!-- Header -->
 <header class="flex flex-col gap-[12px]">
-<div class="flex items-center gap-[12px]">
-<div class="h-2 w-2 bg-[#ae0011] rounded-full animate-pulse"></div>
-<span class="font-mono text-[14px] leading-[16px] text-[#5b5f62] uppercase tracking-widest font-semibold">Sys_Status: Operational</span>
-</div>
-<h1 class="font-['Inter'] text-[48px] leading-[56px] text-[#291715] font-bold tracking-tight">Process Weighing <br/><span class="text-[#ae0011] blinking-cursor">Data Grid</span></h1>
+<h1 class="font-['Inter'] text-[48px] leading-[56px] text-[#291715] font-bold tracking-tight">Our Product Range</h1>
 <p class="font-['Inter'] text-[18px] leading-[28px] text-[#5d3f3c] max-w-3xl">Real-time telemetry and compliance parameters for industrial-grade mass measurement systems. High-density data aggregation for precision engineering applications.</p>
 </header>
 <!-- Data Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
 <!-- Tank & Silo Module -->
-<article class="bg-[#ffffff] rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group hover:shadow-[0px_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
-<div class="absolute top-0 right-0 w-32 h-32 bg-[#d71920]/10 rounded-bl-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
-<div class="flex items-center gap-[12px] mb-2">
+<article class="bg-[#ffffff] rounded-md shadow-sm hover:shadow-md p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group transition-all duration-300">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[#d71920]/5 rounded-bl-[32px] -mr-12 -mt-12 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="flex items-center gap-[12px] mb-2 relative z-10">
 <span class="material-symbols-outlined text-[#ae0011]" data-icon="storage">storage</span>
 <h2 class="font-['Inter'] text-[20px] leading-[28px] text-[#291715] font-bold">Tank/Vessel Weighing Systems</h2>
 </div>
-<div class="flex flex-col gap-[16px]">
+<div class="flex flex-col gap-[16px] relative z-10">
 <p class="font-['Inter'] text-[16px] leading-[24px] text-[#5d3f3c]">Accurate weight measurement for storage tanks, vessels, and reactors.</p>
 <ul class="flex flex-col gap-2">
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>High-load capacity sensors</li>
@@ -669,16 +699,16 @@
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Safe installation with minimal downtime</li>
 </ul>
 </div>
-<button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="w-full bg-[#e0e3e6] text-[#181c1e] font-['Inter'] text-[14px] leading-[20px] py-[24px] rounded-lg uppercase tracking-widest font-bold mt-auto hover:bg-[#e6bdb8] transition-colors duration-200">View Specifications</button>
+<button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="w-full relative z-10 flex items-center justify-center gap-2 bg-transparent border border-[#ae0011] text-[#ae0011] font-['Inter'] text-[14px] leading-[20px] py-[12px] rounded-md uppercase tracking-widest font-bold mt-auto hover:bg-[#ae0011] hover:text-[#ffffff] transition-all duration-300 group/btn">Enquire Now <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></button>
 </article>
 <!-- Sheet & Web Module -->
-<article class="bg-[#ffffff] rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group hover:shadow-[0px_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
-<div class="absolute top-0 right-0 w-32 h-32 bg-[#d71920]/10 rounded-bl-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
-<div class="flex items-center gap-[12px] mb-2">
+<article class="bg-[#ffffff] rounded-md shadow-sm hover:shadow-md p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group transition-all duration-300">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[#d71920]/5 rounded-bl-[32px] -mr-12 -mt-12 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="flex items-center gap-[12px] mb-2 relative z-10">
 <span class="material-symbols-outlined text-[#ae0011]" data-icon="conveyor_belt">conveyor_belt</span>
 <h2 class="font-['Inter'] text-[20px] leading-[28px] text-[#291715] font-bold">Sheet Weighing Systems</h2>
 </div>
-<div class="flex flex-col gap-[16px]">
+<div class="flex flex-col gap-[16px] relative z-10">
 <p class="font-['Inter'] text-[16px] leading-[24px] text-[#5d3f3c]">Optimized for precise measurement of sheets and flat materials.</p>
 <ul class="flex flex-col gap-2">
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>High-speed and accurate weighing</li>
@@ -686,16 +716,16 @@
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Seamless integration with conveyors</li>
 </ul>
 </div>
-<button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="w-full bg-[#e0e3e6] text-[#181c1e] font-['Inter'] text-[14px] leading-[20px] py-[24px] rounded-lg uppercase tracking-widest font-bold mt-auto hover:bg-[#e6bdb8] transition-colors duration-200">View Specifications</button>
+<button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="w-full relative z-10 flex items-center justify-center gap-2 bg-transparent border border-[#ae0011] text-[#ae0011] font-['Inter'] text-[14px] leading-[20px] py-[12px] rounded-md uppercase tracking-widest font-bold mt-auto hover:bg-[#ae0011] hover:text-[#ffffff] transition-all duration-300 group/btn">Enquire Now <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></button>
 </article>
 <!-- Ladle Module -->
-<article class="bg-[#ffffff] rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group hover:shadow-[0px_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
-<div class="absolute top-0 right-0 w-32 h-32 bg-[#d71920]/10 rounded-bl-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
-<div class="flex items-center gap-[12px] mb-2">
+<article class="bg-[#ffffff] rounded-md shadow-sm hover:shadow-md p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group transition-all duration-300">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[#d71920]/5 rounded-bl-[32px] -mr-12 -mt-12 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="flex items-center gap-[12px] mb-2 relative z-10">
 <span class="material-symbols-outlined text-[#ae0011]" data-icon="factory">factory</span>
 <h2 class="font-['Inter'] text-[20px] leading-[28px] text-[#291715] font-bold">Ladle Weighing Systems</h2>
 </div>
-<div class="flex flex-col gap-[16px]">
+<div class="flex flex-col gap-[16px] relative z-10">
 <p class="font-['Inter'] text-[16px] leading-[24px] text-[#5d3f3c]">Designed for high-temperature and heavy industrial applications.</p>
 <ul class="flex flex-col gap-2">
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Heat-resistant load cells</li>
@@ -703,16 +733,16 @@
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Improved safety and operational control</li>
 </ul>
 </div>
-<button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="w-full bg-[#e0e3e6] text-[#181c1e] font-['Inter'] text-[14px] leading-[20px] py-[24px] rounded-lg uppercase tracking-widest font-bold mt-auto hover:bg-[#e6bdb8] transition-colors duration-200">View Specifications</button>
+<button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="w-full relative z-10 flex items-center justify-center gap-2 bg-transparent border border-[#ae0011] text-[#ae0011] font-['Inter'] text-[14px] leading-[20px] py-[12px] rounded-md uppercase tracking-widest font-bold mt-auto hover:bg-[#ae0011] hover:text-[#ffffff] transition-all duration-300 group/btn">Enquire Now <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></button>
 </article>
 <!-- Bar Module -->
-<article class="bg-[#ffffff] rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group hover:shadow-[0px_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300">
-<div class="absolute top-0 right-0 w-32 h-32 bg-[#d71920]/10 rounded-bl-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
-<div class="flex items-center gap-[12px] mb-2">
+<article class="bg-[#ffffff] rounded-md shadow-sm hover:shadow-md p-[24px] flex flex-col gap-[24px] border border-[#e6bdb8]/50 relative overflow-hidden group transition-all duration-300">
+<div class="absolute top-0 right-0 w-24 h-24 bg-[#d71920]/5 rounded-bl-[32px] -mr-12 -mt-12 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="flex items-center gap-[12px] mb-2 relative z-10">
 <span class="material-symbols-outlined text-[#ae0011]" data-icon="linear_scale">linear_scale</span>
 <h2 class="font-['Inter'] text-[20px] leading-[28px] text-[#291715] font-bold">Bar Weighing Systems</h2>
 </div>
-<div class="flex flex-col gap-[16px]">
+<div class="flex flex-col gap-[16px] relative z-10">
 <p class="font-['Inter'] text-[16px] leading-[24px] text-[#5d3f3c]">Reliable weighing solutions for rod, bar, and structural materials.</p>
 <ul class="flex flex-col gap-2">
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Accurate weight per length measurement</li>
@@ -720,102 +750,15 @@
 <li class="flex items-center gap-2 font-['Inter'] text-[16px] text-[#291715]"><span class="w-1.5 h-1.5 bg-[#ae0011] rounded-full flex-shrink-0"></span>Durable construction for heavy-duty use</li>
 </ul>
 </div>
-<button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="w-full bg-[#e0e3e6] text-[#181c1e] font-['Inter'] text-[14px] leading-[20px] py-[24px] rounded-lg uppercase tracking-widest font-bold mt-auto hover:bg-[#e6bdb8] transition-colors duration-200">View Specifications</button>
+<button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="w-full relative z-10 flex items-center justify-center gap-2 bg-transparent border border-[#ae0011] text-[#ae0011] font-['Inter'] text-[14px] leading-[20px] py-[12px] rounded-md uppercase tracking-widest font-bold mt-auto hover:bg-[#ae0011] hover:text-[#ffffff] transition-all duration-300 group/btn">Enquire Now <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span></button>
 </article>
 </div>
 </div>
 </section>
 
 
-<div id="query-form" class="relative z-10 aq-py-24 px-8 md:px-16 max-w-[1440px] mx-auto">
-    <div class="aq-mb-12">
-        <h1 class="aq-display-lg-mobile aq-text-on-surface uppercase aq-mb-4" style="font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-0.02em;font-weight:700;">
-            ASK YOUR QUERY
-        </h1>
-        <p class="aq-body-lg aq-text-secondary max-w-2xl">
-            Connect with our engineering specialists. Please provide your requirements below, and our technical team will respond with precise solutions.
-        </p>
-    </div>
-    <div class="aq-bg-surface-lowest border border-[#e6bdb8] rounded-[20px] aq-shadow-premium aq-p-8 aq-md-p-12">
-        <form action="#" class="aq-space-y-8" method="POST">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 aq-gap-6">
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="fullName">FULL NAME</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">person</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="fullName" name="fullName" placeholder="Full Name" type="text"/>
-                    </div>
-                </div>
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="email">EMAIL ID</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">mail</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="email" name="email" placeholder="Email ID" type="email"/>
-                    </div>
-                </div>
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="phone">PHONE NO.</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">call</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="phone" name="phone" placeholder="Phone No." type="tel"/>
-                    </div>
-                </div>
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="company">COMPANY NAME</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">domain</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="company" name="company" placeholder="Company Name" type="text"/>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 aq-gap-6">
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="state">STATE</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">map</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="state" name="state" placeholder="State" type="text"/>
-                    </div>
-                </div>
-                <div class="flex flex-col aq-gap-2">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="city">CITY</label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 aq-text-secondary material-symbols-outlined" style="font-variation-settings:'FILL' 0;font-size:20px;">location_city</span>
-                        <input class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-pl-12 aq-pr-4 aq-py-4 aq-body-md aq-text-on-surface" id="city" name="city" placeholder="City" type="text"/>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col aq-gap-2">
-                <label class="aq-label-caps aq-text-on-surface-variant" for="application">APPLICATION INTERESTED IN *</label>
-                <div class="relative">
-                    <select class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-px-4 aq-py-4 aq-body-md aq-text-on-surface appearance-none cursor-pointer" id="application" name="application">
-                        <option disabled="" selected="" value="">Select Application</option>
-                        <option value="heavy-weighing">Heavy Capacity Weighing</option>
-                        <option value="process-automation">Process Automation</option>
-                        <option value="testing-systems">Material Testing Systems</option>
-                        <option value="other">Other Engineering Solutions</option>
-                    </select>
-                    <span class="absolute right-4 top-1/2 -translate-y-1/2 aq-text-secondary pointer-events-none material-symbols-outlined">expand_more</span>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 aq-gap-8 items-end">
-                <div class="flex flex-col aq-gap-2 h-full">
-                    <label class="aq-label-caps aq-text-on-surface-variant" for="requirement">SPECIFY YOUR REQUIREMENT *</label>
-                    <textarea class="w-full aq-bg-surface-low border-0 border-b-2 border-[#e6bdb8] rounded-t-lg aq-px-4 aq-py-4 aq-body-md aq-text-on-surface resize-none min-h-[120px]" id="requirement" name="requirement" placeholder="Please provide details about your requirements..." rows="4"></textarea>
-                </div>
-                <div class="flex flex-col aq-gap-4 justify-end h-full aq-pt-6">
-                    <button class="w-full aq-bg-primary-container aq-text-on-primary aq-headline-sm aq-py-4 rounded-lg hover:bg-[#ae0011] transition-all duration-300 flex items-center justify-center aq-gap-2 group" style="box-shadow:0 2px 8px rgba(174,0,17,0.15);" type="submit">
-                        ENQUIRE NOW
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" style="font-variation-settings:'wght' 600;">arrow_forward</span>
-                    </button>
-                    <p class="aq-body-md aq-text-secondary text-sm text-center lg:text-left">
-                        By deploying this request, you agree to our <a class="aq-text-primary hover:underline" href="#">Data Privacy Protocol</a>.
-                    </p>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-</section>
+
+
 
 
   
@@ -896,7 +839,7 @@
     @media (min-width: 768px) { .mobile-scroll-container { animation: none; width: 100%; display: grid; } }
 </style>
 
-<div class="avery-grid-bg w-full relative z-10 bg-[#f9f9f7]">
+<div class="w-full relative z-10 bg-[#f9f9f7]">
     <!-- Trust & Expertise Section -->
     <section class="relative py-[64px] md:py-[96px] border-b border-[#e2e3e1]">
         <div class="max-w-7xl mx-auto px-[20px] md:px-[64px]">
@@ -906,31 +849,31 @@
                     <h2 class="font-['Inter'] text-[32px] md:text-[48px] font-bold text-[#1a1c1b] mb-[16px] leading-[1.2] md:leading-[1.1] tracking-[-0.01em] md:tracking-[-0.02em]">What Differentiates Us</h2>
                     <p class="font-['Inter'] text-[18px] font-normal leading-[1.6] text-[#5f5e5e] mb-[24px]">Avery India stands as a pillar of reliability in heavy industry. Our custom-engineered solutions are built on decades of expertise, ensuring flawless operation in the most demanding environments.</p>
                 </div>
-                <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-lg border border-[#e2e3e1]">
-                    <img alt="Professional industrial engineering team reviewing technical blueprints in a modern factory setting" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4r83zDEr9W4vURdBnm_C09dYyv53OoNRc8dm-ohQGaR1drvHd7DJWWycbR8guC4I-LyapUMZ6J3eMFQ9rMMhBWX3-aHy7BE9xLNdAOBM5FSNKL4x4crrmiuEyN6bKYXTkOl1MzLQSObdRft6iFLIPeCWnX-j-RDD3lBPHwd-lUbBxkkyO1i23Ix1DBemKXTRpsNANKl0x9eqFD59_N33ioJrebeXcCdxbo3Ye4aIA5iQjzMejL18MHP_v2kc36LUlN-nvcSlGew"/>
+                <div class="lg:w-1/2 rounded-md overflow-hidden shadow-lg border border-[#e2e3e1]">
+                    <img alt="Avery Weigh-Tronix Silos" class="w-full h-auto object-cover rounded-md shadow-lg" src="./assets/images/avery_india.jpg"/>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
                 <!-- Proven Industry Expertise Card -->
-                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-lg avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
+                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-md avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
                     <div class="w-10 h-10 rounded bg-[#eeeeec] flex items-center justify-center mb-[16px] border border-[#e2e3e1] group-hover:border-[#ae0011] transition-colors"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span></div>
                     <h3 class="font-['Inter'] text-[24px] font-semibold leading-[1.3] text-[#1a1c1b] mb-[8px]">Proven Industry Expertise</h3>
                     <p class="font-['Inter'] text-[16px] font-normal leading-[1.5] text-[#5f5e5e]">Decades of specialized knowledge in heavy industrial weighing and metrology standards.</p>
                 </div>
                 <!-- Custom Design Solutions Card -->
-                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-lg avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
+                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-md avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
                     <div class="w-10 h-10 rounded bg-[#eeeeec] flex items-center justify-center mb-[16px] border border-[#e2e3e1] group-hover:border-[#ae0011] transition-colors"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">architecture</span></div>
                     <h3 class="font-['Inter'] text-[24px] font-semibold leading-[1.3] text-[#1a1c1b] mb-[8px]">Custom Design Solutions</h3>
                     <p class="font-['Inter'] text-[16px] font-normal leading-[1.5] text-[#5f5e5e]">Tailored engineering for unique operational requirements and challenging environments.</p>
                 </div>
                 <!-- End-to-End Support Card -->
-                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-lg avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
+                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-md avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
                     <div class="w-10 h-10 rounded bg-[#eeeeec] flex items-center justify-center mb-[16px] border border-[#e2e3e1] group-hover:border-[#ae0011] transition-colors"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">handshake</span></div>
                     <h3 class="font-['Inter'] text-[24px] font-semibold leading-[1.3] text-[#1a1c1b] mb-[8px]">End-to-End Support</h3>
                     <p class="font-['Inter'] text-[16px] font-normal leading-[1.5] text-[#5f5e5e]">Comprehensive lifecycle management from initial consultation to nationwide field maintenance.</p>
                 </div>
                 <!-- Advanced Technology Card -->
-                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-lg avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
+                <div class="bg-[#f9f9f7] border border-[#e2e3e1] rounded-md avery-premium-card p-[24px] flex flex-col h-full relative overflow-hidden group">
                     <div class="w-10 h-10 rounded bg-[#eeeeec] flex items-center justify-center mb-[16px] border border-[#e2e3e1] group-hover:border-[#ae0011] transition-colors"><span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">settings_input_component</span></div>
                     <h3 class="font-['Inter'] text-[24px] font-semibold leading-[1.3] text-[#1a1c1b] mb-[8px]">Advanced Technology</h3>
                     <p class="font-['Inter'] text-[16px] font-normal leading-[1.5] text-[#5f5e5e]">Industry 4.0 ready systems featuring high-precision sensors and seamless digital integration.</p>
@@ -942,7 +885,7 @@
 <!-- Industries We Serve Section -->
 <style>
   .industries-bg-technical-grid {
-    background-color: #fff8f7;
+    background-color: #f7f7f7;
     background-image: 
         linear-gradient(to right, rgba(209, 213, 219, 0.05) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(209, 213, 219, 0.05) 1px, transparent 1px);
@@ -959,7 +902,7 @@
   }
   .industries-grid-content { position: relative; z-index: 1; }
 </style>
-<section class="industries-bg-technical-grid py-[80px]">
+<section id="industries" class="industries-bg-technical-grid py-[80px]">
   <div class="industries-grid-content max-w-[1280px] mx-auto px-[32px]">
     <!-- Section Header -->
     <div class="mb-[48px] max-w-3xl">
@@ -975,7 +918,7 @@
     <div class="grid grid-cols-1 gap-[24px] md:grid-cols-3 pb-[12px] md:pb-0 mobile-expand-container">
 
       <!-- Card 1: Steel & Metal Processing -->
-      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group">
+      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group">
         <div class="h-48 relative overflow-hidden bg-[#dde0e3]">
           <img alt="Steel &amp; Metal Processing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Umlzgt7zUyeRi98YYFCitm6yHFti5UyqdirMHpiz0-CBZrAN8_gN3VxdCLPPhPiO1ndIsZf4jOAtipMZr7R9Bj9jxIq34VVTFX4r6XA2r77GFowLrI_RSve4CxCO4T-k9DXUfqSdaOFcUrixODJvNXoG14zIWXrgIhoCOZyaeKp_nDhyS50YIX3qJUumQm9eKHpYg4DCuVLrF0_lT03TBDdstHWgz4PQ-IKOkobBOJG0DL2mKLD2GKSZFLptBInD7Pf7kvvoPA"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#291715]/60 to-transparent"></div>
@@ -995,7 +938,7 @@
       </div>
 
       <!-- Card 2: Chemical & Pharmaceutical -->
-      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group">
+      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group">
         <div class="h-48 relative overflow-hidden bg-[#dde0e3]">
           <img alt="Chemical &amp; Pharmaceutical" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi6BO0dW0_jBjj-gnaiW1EV82i8B21QhxERflFNB9lBBJJSscTuSZ_eTrbDVe6l0G-MEFTS8p8TaZ2SPNo9O1f0Uu1Q-nacP-gd0A7IVh4eU4oEkgjNe7z6odxebJxWN1Or4bZPTC8rihN6Xp53wyLJqC28841KqLRd5jCgLlTGLoWkBTcTrwcglpmnvXcUnjUpmScRZy8-h_vFGF_Y0lPAdHo5RNjj7iCsb0QD-yZfBZluKmYreHSOCULxgGD_TeDlLB5IGYLAw"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#291715]/60 to-transparent"></div>
@@ -1015,7 +958,7 @@
       </div>
 
       <!-- Card 3: Cement & Construction (hidden on mobile, visible on desktop) -->
-      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
+      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
         <div class="h-48 relative overflow-hidden bg-[#dde0e3]">
           <img alt="Cement &amp; Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnZave_R38p84RSKhSZXwVJJPYC5g86w4rZWOpMzOA_l4zzjKqRm56up5x7CUUrBLTQShIyKT6Aq3jN5I5SVcftfix43Y7n5rv-dfhDgvQFyvfAs5C2jCg1bn1yPGG8ytc7gxpyBQ7dbFvH2zUrlU1MXBur1wHKhLv8Nbd6ZtjKZwkahWEkTW8FpeL55hn8adelk0ZZQ3t7pAhGHAfcHv2fmRvqySFOLfIhAxZbYchFCGmxdSBAXubtKMf9e9qPSqm1EV3MRCDQ"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#291715]/60 to-transparent"></div>
@@ -1035,7 +978,7 @@
       </div>
 
       <!-- Card 4: Food & Beverage (hidden on mobile) -->
-      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
+      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
         <div class="h-48 relative overflow-hidden bg-[#dde0e3]">
           <img alt="Food &amp; Beverage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-_9xMNxPDEglBlVxRcUd1Hm3zR06rSS7ixarQDMrAfb6AUufNzaVrXNrPWyvQKNjksAGvu5JJwqI4zGNz-ybjHwNUwIseUoGn-m_s5z8POaKY4wO26xzGYeaRg-au__uIYeNqNTouxJqSGVXv4xXcjlRwaTxcIkPiSkmZdOG-TFPdTH0JYqPHyEFHgRYhfp9VkJRZmHy5gFGOo1ZvoPMyaWOy-MqM62D1ueELlhI_BStmn2AB4uX97vmi5_7URMy1XO6RJPKDZg"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#291715]/60 to-transparent"></div>
@@ -1055,7 +998,7 @@
       </div>
 
       <!-- Card 5: Manufacturing & Automation (hidden on mobile) -->
-      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[24px] shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
+      <div class="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-md shadow-[0px_4px_20px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col h-full group md:flex hidden mobile-hidden-card">
         <div class="h-48 relative overflow-hidden bg-[#dde0e3]">
           <img alt="Manufacturing &amp; Automation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8RjD4ekYMt5M3aOEjagO2FI5cLGtwM3K6VsGG7YpEJDlq4IqDWqOsK1Fzg1o2rQTK15T5Zo8AaOStiaWBZhG6kuHttnawmRPf2_ZmjxgecZZg7yv1-1UAqh4jft9Ob3iWJEJRX9De0u5qFX0NqqzFSpWCQznoVjNXn9ePiVRP8q5SLMTCNaUlzykgPYk9lbwfIkim7Vt2futIQy9F50OEpr00VbMGtXE_mVmA8V8syqAVsuaS6yx3s7RO3jPWxgUzZSIdGDLOdg"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#291715]/60 to-transparent"></div>
@@ -1075,7 +1018,7 @@
       </div>
 
       <!-- Card 6: Custom Solutions CTA (hidden on mobile) -->
-      <div onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="col-span-1 md:col-span-1 flex flex-col items-center justify-center p-[48px] bg-[#ae0011] text-white rounded-[24px] shadow-lg text-center group hover:bg-[#d71920] transition-all duration-300 cursor-pointer hidden mobile-hidden-card md:flex">
+      <div onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="col-span-1 md:col-span-1 flex flex-col items-center justify-center p-[48px] bg-[#ae0011] text-white rounded-md shadow-lg text-center group hover:bg-[#d71920] transition-all duration-300 cursor-pointer hidden mobile-hidden-card md:flex">
         <span class="material-symbols-outlined mb-[24px]" style="font-size: 48px;">settings</span>
         <h3 class="font-['Inter'] text-[24px] font-semibold leading-[32px] mb-[12px]">Custom Solutions</h3>
         <p class="font-['Inter'] text-[16px] leading-[24px] opacity-90 mb-[48px]">Bespoke engineering for your unique operational constraints.</p>
@@ -1097,25 +1040,140 @@
   </div>
 </section>
 
+<!-- Inquiry Form Section -->
+<style>
+  .iq-section { background: #f7f7f7; }
+  .iq-card { background: #ffffff; border: 1px solid #e6bdb8; border-radius: 20px; box-shadow: 0 4px 24px rgba(174,0,17,0.06); }
+  .iq-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: #5f5e5e; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .iq-input { font-family: 'Inter', sans-serif; font-size: 15px; color: #1a1c1b; background: #f9f9f7; border: none; border-bottom: 2px solid #e6bdb8; border-radius: 8px 8px 0 0; padding: 14px 16px 14px 46px; width: 100%; outline: none; transition: border-color 0.2s; }
+  .iq-input:focus { border-bottom-color: #ae0011; background: #fff4f3; }
+  .iq-input::placeholder { color: #b0aeae; }
+  .iq-select { font-family: 'Inter', sans-serif; font-size: 15px; color: #1a1c1b; background: #f9f9f7; border: none; border-bottom: 2px solid #e6bdb8; border-radius: 8px 8px 0 0; padding: 14px 40px 14px 16px; width: 100%; outline: none; appearance: none; cursor: pointer; transition: border-color 0.2s; }
+  .iq-select:focus { border-bottom-color: #ae0011; background: #fff4f3; }
+  .iq-textarea { font-family: 'Inter', sans-serif; font-size: 15px; color: #1a1c1b; background: #f9f9f7; border: none; border-bottom: 2px solid #e6bdb8; border-radius: 8px 8px 0 0; padding: 14px 16px; width: 100%; outline: none; resize: none; transition: border-color 0.2s; min-height: 130px; }
+  .iq-textarea:focus { border-bottom-color: #ae0011; background: #fff4f3; }
+  .iq-textarea::placeholder { color: #b0aeae; }
+  .iq-field-wrap { position: relative; }
+  .iq-field-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #ae0011; font-size: 20px; pointer-events: none; }
+  .iq-field-icon-right { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #5f5e5e; font-size: 20px; pointer-events: none; }
+  .iq-submit-btn { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; background: #ae0011; color: #ffffff; border: none; border-radius: 10px; padding: 16px 32px; width: 100%; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s, box-shadow 0.2s, transform 0.15s; box-shadow: 0 4px 16px rgba(174,0,17,0.2); }
+  .iq-submit-btn:hover { background: #d71920; box-shadow: 0 8px 24px rgba(174,0,17,0.3); transform: translateY(-1px); }
+  .iq-privacy { font-family: 'Inter', sans-serif; font-size: 13px; color: #5f5e5e; text-align: center; margin-top: 10px; }
+  .iq-privacy a { color: #ae0011; text-decoration: underline; }
+</style>
 
+<section id="inquiry-section" class="iq-section py-[80px]">
+  <div class="max-w-[1280px] mx-auto px-[32px]">
+    <!-- Section Header -->
+    <div class="mb-[48px]">
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;color:#ae0011;text-transform:uppercase;display:block;margin-bottom:8px;">Get In Touch</span>
+      <h2 style="font-family:'Inter',sans-serif;font-size:36px;font-weight:700;color:#291715;margin-bottom:12px;line-height:1.2;letter-spacing:-0.01em;">Send Us an Enquiry</h2>
+      <p style="font-family:'Inter',sans-serif;font-size:17px;color:#5b5f62;line-height:1.6;max-width:600px;">Tell us about your requirements and our engineering team will get back to you with the best solution.</p>
+    </div>
+    <!-- Form Card -->
+    <div class="iq-card" style="padding: 40px 48px;">
+      <form action="#" method="POST">
 
-
-    <!-- Partner Ecosystem Section -->
-    <section class="py-[64px] md:py-[96px] bg-[#f9f9f7] border-b border-[#e2e3e1]">
-        <div class="max-w-7xl mx-auto px-[20px] md:px-[64px] text-center">
-            <span class="font-['Inter'] text-[12px] font-bold tracking-[0.1em] text-[#ae0011] uppercase mb-[16px] block">Trusted By Industry Leaders</span>
-            <h2 class="font-['Inter'] text-[30px] font-semibold leading-[1.2] tracking-[-0.01em] text-[#1a1c1b] mb-[48px] max-w-2xl mx-auto">Powering operations for the world's most demanding enterprises.</h2>
-            <!-- Substantial Logo Grid -->
-            <div class="overflow-hidden mb-[48px] py-[16px]">
-                <div class="mobile-scroll-container flex md:grid md:grid-cols-3 gap-x-[32px] gap-y-[32px] items-center justify-center max-w-4xl mx-auto">
-                    <div class="flex-shrink-0 w-[160px] md:w-full flex justify-center p-6 bg-[#ffffff] border border-[#e2e3e1] rounded-lg cursor-pointer hover:border-[#ae0011] transition-colors">                    <img alt="Jaypee Group Logo" class="max-h-16 object-contain" src="images/logos/jaypee.png"/></div>
-                    <div class="flex-shrink-0 w-[160px] md:w-full flex justify-center p-6 bg-[#ffffff] border border-[#e2e3e1] rounded-lg cursor-pointer hover:border-[#ae0011] transition-colors">                    <img alt="UltraTech Cement Logo" class="max-h-16 object-contain" src="images/logos/ultratech.png"/></div>
-                    <div class="flex-shrink-0 w-[160px] md:w-full flex justify-center p-6 bg-[#ffffff] border border-[#e2e3e1] rounded-lg cursor-pointer hover:border-[#ae0011] transition-colors">                    <img alt="SAIL Logo" class="max-h-16 object-contain" src="images/logos/sail.png"/></div>
-                </div>
+        <!-- Row 1: Personal Info -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]" style="margin-bottom:28px;">
+          <!-- Full Name -->
+          <div>
+            <label class="iq-label" for="iq-fullName">Full Name *</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">person</span>
+              <input class="iq-input" id="iq-fullName" name="fullName" placeholder="Your full name" type="text" required/>
             </div>
-
+          </div>
+          <!-- Email -->
+          <div>
+            <label class="iq-label" for="iq-email">Email ID *</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">mail</span>
+              <input class="iq-input" id="iq-email" name="email" placeholder="you@company.com" type="email" required/>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div>
+            <label class="iq-label" for="iq-phone">Phone No. *</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">call</span>
+              <input class="iq-input" id="iq-phone" name="phone" placeholder="+91 00000 00000" type="tel" required/>
+            </div>
+          </div>
+          <!-- Company -->
+          <div>
+            <label class="iq-label" for="iq-company">Company Name</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">domain</span>
+              <input class="iq-input" id="iq-company" name="company" placeholder="Company name" type="text"/>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Row 2: Location -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px]" style="margin-bottom:28px;">
+          <!-- State -->
+          <div>
+            <label class="iq-label" for="iq-state">State</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">map</span>
+              <input class="iq-input" id="iq-state" name="state" placeholder="State" type="text"/>
+            </div>
+          </div>
+          <!-- City -->
+          <div>
+            <label class="iq-label" for="iq-city">City</label>
+            <div class="iq-field-wrap">
+              <span class="iq-field-icon material-symbols-outlined" style="font-variation-settings:'FILL' 0;">location_city</span>
+              <input class="iq-input" id="iq-city" name="city" placeholder="City" type="text"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Application -->
+        <div style="margin-bottom:28px;">
+          <label class="iq-label" for="iq-application">Application Interested In *</label>
+          <div class="iq-field-wrap">
+            <select class="iq-select" id="iq-application" name="application" required>
+              <option disabled selected value="">Select Application</option>
+              <option value="heavy-weighing">Heavy Capacity Weighing</option>
+              <option value="process-automation">Process Automation</option>
+              <option value="testing-systems">Material Testing Systems</option>
+              <option value="other">Other Engineering Solutions</option>
+            </select>
+            <span class="iq-field-icon-right material-symbols-outlined">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Row 4: Requirement & Submit -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[32px]" style="align-items:end;">
+          <!-- Textarea -->
+          <div>
+            <label class="iq-label" for="iq-requirement">Specify Your Requirement *</label>
+            <textarea class="iq-textarea" id="iq-requirement" name="requirement" placeholder="Please describe your requirements, capacity needed, environment conditions, etc..." rows="5" required></textarea>
+          </div>
+          <!-- Submit -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <button class="iq-submit-btn" type="submit">
+              ENQUIRE NOW
+              <span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'wght' 600;">arrow_forward</span>
+            </button>
+            <p class="iq-privacy">
+              By submitting this form, you agree to our <a href="#">Data Privacy Protocol</a>.
+            </p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!-- End of Inquiry Form Section -->
+
+
+
+
+
 
 <!-- Premium Horizontal Product Carousel Section -->
 <style>
@@ -1153,7 +1211,7 @@
 <div class="flex gap-[24px] overflow-x-auto p-carousel-no-scrollbar snap-x snap-mandatory pb-[32px] pt-[16px]" id="pc-carousel">
 <!-- Card 1: Weighbridges -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Weighbridges" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCip0IV-YlJwJY1tH2zU10RfIg1zttLUMKm2UJ18HcA5NVRlccn1HELy3yX-Tcd5D2GZk-yxaAUAWa3ReURwTWBHSb_cTW0uFfJectddcSHgOqVMIjsmQF__2orhXn_JmjfbPj_B3QEL1Lv1YzDHszXANOpuXOfaO9rB5QFC6CQYgcIhOxxdbUH_-VbYWny5otitZPprlBto4VTh_6SICj9Sapg5JDcu2QwPakE8JF6TPLMk2GAV6XlDgfRSu3FwIh45mr5H6bbGw"/>
 </div>
@@ -1169,7 +1227,7 @@
 </div>
 <!-- Card 2: Rail Weighing -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Rail Weighing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyNT3wiWaH3zMWzJujp9TNSSVP9excwd66mAgqCp3Oox9yiRFGm14WW6XddGlOsaK2ApivcBpHFdWIVYeAVedTRhtYXOPTQtQhguuF1oExi8y33DLbhkRSNe3lz1HIVvRzOgs10qGe0NCiI_P7qh-6FyAqAvYOcdbgLNY__coRZtq8Y09PeyiRe01VQeQsz2LpzgYODzLxaWEXU7mLMWA6L2mBoA4H2gb_14W-AK_O2z4UKK66SbTqyk6x5hGaMIrIj6MR5cD1A"/>
 </div>
@@ -1185,7 +1243,7 @@
 </div>
 <!-- Card 3: Load Cells -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Load Cells" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8PMvb1Oj9EYEdyrOgyqsIHIyCDc3g8RlogvuGrjmiC7s1vZX4lQ-e0lmQxidFsx49uYoqqBcCn004iqP8FqVGFTt2vHEvbsMcZGr_T54t2kYHiiYRgTJ1JGhpiqlRthGYFNRskRpl7SnZbcrJUwSD8CCVba0jIK-12_R-esOIhdqygUshg8CwmuMOl3LbigDDXoEWfNLS6CmJgiIa6X4EixXy80clcd6KVxNOZo8x_4DH1XLr0CEov2ACqN2H1eshGDD0PnHbsg"/>
 </div>
@@ -1201,7 +1259,7 @@
 </div>
 <!-- Card 4: Indicators -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Indicators" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xAcz_8KnsGKqQ1aTHfutUefrM4AXcpp-ePbyDJO7PbGPrvU-c4VWFYUwgf7lAWO7qppUBNaHFD-N1c2zQ3YTad_bbp75XhRfHdNWbgzpoR5YEXVrLaO7oKQLzDhG4Hy2ie--xMpoW7I6z-xbKAuBcCpP5JTH9wZbjy951BYY2pk_ca5OPN7kynyOwYWL2EOx-8RscbofnbWE6jIy8UhWnNDzXAkzredAoGKwQAA5iEalN5ycG-KiVlBo0qZxezT0wkggR9V6vg"/>
 </div>
@@ -1217,7 +1275,7 @@
 </div>
 <!-- Card 5: Automation -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0JSNdHOxF04GOMesAV7LFTpBHsYmdbWCWjYgTzssk21UFXUb3QnZy-39p66kz5Gb5tFyC0dLvOtiqbeTDr_I4ryYoCjtV_UOXx0q2-N60jVfxVNGKQCSlpDE5VaGpqD_aeP-rVGOWkV_n0Bd822A7p2QrXkDMYujJ0cUm4nUgNJJQhZugMFV9TApJ2vhcaunaXx2WC3VPgEb47f6JNoOM0xO9SgOcRsbzlKAMy0N5wexyXb0v2qVkDa1Q-FcSbZC0JLoVO-2NzQ"/>
 </div>
@@ -1233,7 +1291,7 @@
 </div>
 <!-- Card 6: Stock Monitoring -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-[#ffffff] rounded-[20px] p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
+<div class="bg-[#ffffff] rounded-md p-carousel-ambient-shadow border border-[#e6bdb8] hover:border-[#ae0011] transition-colors duration-300 h-full flex flex-col overflow-hidden relative">
 <div class="h-[200px] w-full overflow-hidden">
 <img alt="Stock Monitoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcbwLvFur4-WLw3G7UuWvuesYn7c4s0c4e23Rz9i_HbsjTcUqn3XYYegmn1MrN7TRrI1447_N_bn4rKu24NxGrNB0e_HNjDgNzamCAZff3TVTQP-fkwgW4Z1QnIgPalAKUdQWb13xFHLyG2Myxb_ITQj1kGArCZiXULVzrhPOHzEFS527rAvX1MD0WFaGVBm6MxiXpFVsD0i-uXvFVynjGvQ83efwI85-2HzzDDDblYWhuPb3biHx-AVp_FJ1iDUzBsI9XFSQ6jQ"/>
 </div>
@@ -1249,13 +1307,13 @@
 </div>
 <!-- Special Custom Request Card -->
 <div class="flex-none w-[300px] snap-start group cursor-pointer">
-<div class="bg-gradient-to-br from-[#ae0011] to-[#93000d] rounded-[20px] p-carousel-ambient-shadow h-full flex flex-col relative overflow-hidden text-[#ffffff] p-[24px]">
+<div class="bg-gradient-to-br from-[#ae0011] to-[#93000d] rounded-md p-carousel-ambient-shadow h-full flex flex-col relative overflow-hidden text-[#ffffff] p-[24px]">
 <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')]"></div>
 <div class="flex-grow flex flex-col justify-center items-center text-center relative z-10">
 <span class="material-symbols-outlined text-[48px] mb-[16px]">engineering</span>
 <h3 class="font-['Inter'] text-[24px] font-semibold leading-[1.3] mb-[8px]">Custom Requirements?</h3>
 <p class="font-['Inter'] text-[16px] leading-[1.5] opacity-90 mb-[24px]">Need a specialized engineering solution for your facility?</p>
-<button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="bg-[#ffffff] text-[#ae0011] px-[16px] py-[8px] rounded-[4px] font-bold hover:bg-[#f4f4f2] transition-colors w-full">Consult an Expert</button>
+<button onclick="document.getElementById('inquiry-section').scrollIntoView({behavior: 'smooth'})" class="bg-[#ffffff] text-[#ae0011] px-[16px] py-[8px] rounded-[4px] font-bold hover:bg-[#f4f4f2] transition-colors w-full">Enquire Now</button>
 </div>
 </div>
 </div>
@@ -1308,27 +1366,52 @@
             carousel.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
         });
 
+        // Drag to scroll functionality
+        let isDown = false;
+        let startX;
+        let scrollLeftPos;
+
+        carousel.style.cursor = 'grab';
+
+        // Prevent ghost-dragging images which breaks the custom drag scroll
+        carousel.querySelectorAll('img').forEach(img => {
+            img.addEventListener('dragstart', (e) => e.preventDefault());
+        });
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.remove('snap-x', 'snap-mandatory');
+            carousel.style.cursor = 'grabbing';
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeftPos = carousel.scrollLeft;
+        });
+
+        const stopDrag = () => {
+            if (!isDown) return;
+            isDown = false;
+            carousel.classList.add('snap-x', 'snap-mandatory');
+            carousel.style.cursor = 'grab';
+        };
+
+        // Bind mouseup to window so it doesn't get stuck if released outside the container
+        window.addEventListener('mouseup', stopDrag);
+        carousel.addEventListener('mouseleave', stopDrag);
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 1.5; // Adjusted drag speed slightly for smoother feel
+            carousel.scrollLeft = scrollLeftPos - walk;
+        });
+
         // Initial UI state
         updateUI();
     });
 </script>
 
-    <!-- CTA Section -->
-    <section class="py-[64px] md:py-[96px] bg-[#f9f9f7]">
-        <div class="max-w-7xl mx-auto px-[20px] md:px-[64px] flex justify-center">
-            <div class="bg-[#f4f4f2] border border-[#e2e3e1] rounded-full px-[32px] py-[24px] flex flex-col md:flex-row items-center gap-[24px] shadow-lg max-w-4xl w-full justify-between">
-                <div class="text-center md:text-left">
-                    <p class="font-['Inter'] text-[24px] font-semibold leading-[1.3] text-[#1a1c1b]">Need a customized engineering solution?</p>
-                    <p class="font-['Inter'] text-[16px] font-normal leading-[1.5] text-[#5f5e5e]">Our team is ready to assist.</p>
-                </div>
-                <button onclick="document.getElementById('query-form').scrollIntoView({behavior: 'smooth'})" class="bg-[#ae0011] text-[#ffffff] px-[32px] py-[16px] rounded-full font-semibold hover:bg-[#d71920] transition-colors flex items-center gap-2 whitespace-nowrap">
-                    <span>Request Consultation</span>
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </button>
-            </div>
-        </div>
-    </section>
 </div>
+
 
 <style>
   .industrial-transition {
@@ -1336,105 +1419,42 @@
   }
 </style>
 <!-- FOOTER START -->
-<footer class="bg-[#F3F4F6] border-t border-[#E5E7EB] w-full">
-<div class="max-w-[1440px] mx-auto px-[20px] md:px-[64px] pt-[96px] pb-[48px]">
-<!-- 3-Column Layout -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-[48px]">
-<!-- Column 1: Brand & Trust -->
-<div class="md:col-span-5 flex flex-col gap-[24px] industrial-transition opacity-100 translate-y-0">
-<div class="font-['Inter'] text-[30px] font-bold text-[#ae0011] tracking-tight">
-                        AVERY INDIA
-                    </div>
-<p class="font-['Inter'] text-[16px] text-[#656464] max-w-md leading-relaxed">
-                        Redefining precision weighing with technical authority. Since 1911, we have engineered accuracy for India's heavy industries, providing high-performance solutions that power the nation's infrastructure.
-                    </p>
-<div class="flex flex-col gap-[16px] mt-[8px]">
-<div class="flex items-center gap-[16px]">
-<span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-['Inter'] text-[12px] font-bold tracking-[0.1em] text-[#1a1c1b]">115+ YEARS IN INDIA</span>
-</div>
-<div class="flex items-center gap-[16px]">
-<span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">hub</span>
-<span class="font-['Inter'] text-[12px] font-bold tracking-[0.1em] text-[#1a1c1b]">NATIONWIDE SERVICE NETWORK</span>
-</div>
-<div class="flex items-center gap-[16px]">
-<span class="material-symbols-outlined text-[#ae0011]" style="font-variation-settings: 'FILL' 1;">public</span>
-<span class="font-['Inter'] text-[12px] font-bold tracking-[0.1em] text-[#1a1c1b]">GLOBAL TECHNICAL EXPERTISE</span>
-</div>
-</div>
-</div>
-<!-- Column 2: Quick Links -->
-<div class="md:col-span-3 industrial-transition opacity-100 translate-y-0">
-<h3 class="font-['Inter'] text-[12px] font-bold tracking-[0.2em] text-[#ae0011] mb-[24px] uppercase">Quick Links</h3>
-<ul class="flex flex-col gap-[16px]">
-<li class=""><a class="font-['Inter'] text-[16px] text-[#5f5e5e] hover:text-[#ae0011] industrial-transition flex items-center group" href="#">
-                            About Avery
-                            <span class="material-symbols-outlined text-sm ml-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 industrial-transition">arrow_forward</span>
-</a></li>
-<li class=""><a class="font-['Inter'] text-[16px] text-[#5f5e5e] hover:text-[#ae0011] industrial-transition flex items-center group" href="#">
-                            Process Weighing Solutions
-                            <span class="material-symbols-outlined text-sm ml-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 industrial-transition">arrow_forward</span>
-</a></li>
-<li class=""><a class="font-['Inter'] text-[16px] text-[#5f5e5e] hover:text-[#ae0011] industrial-transition flex items-center group" href="#">
-                            Tank Weighing
-                            <span class="material-symbols-outlined text-sm ml-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 industrial-transition">arrow_forward</span>
-</a></li>
-<li class=""><a class="font-['Inter'] text-[16px] text-[#5f5e5e] hover:text-[#ae0011] industrial-transition flex items-center group" href="#query-form">
-                            Contact Us
-                            <span class="material-symbols-outlined text-sm ml-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 industrial-transition">arrow_forward</span>
-</a></li>
-<li class=""><a class="font-['Inter'] text-[16px] text-[#ae0011] font-bold hover:underline underline-offset-4 industrial-transition flex items-center" href="#query-form">
-                            Request A Quote
-                        </a></li>
-</ul>
-</div>
-<!-- Column 3: Contact Info -->
-<div class="md:col-span-4 flex flex-col gap-[24px] industrial-transition opacity-100 translate-y-0">
-<h3 class="font-['Inter'] text-[12px] font-bold tracking-[0.2em] text-[#ae0011] uppercase">Industrial Support</h3>
-<div class="flex flex-col gap-[16px]">
-<div class="flex items-start gap-[16px]">
-<span class="material-symbols-outlined text-[#5f5e5e] mt-1">call</span>
-<div>
-<p class="font-['Inter'] text-[16px] text-[#1a1c1b] font-semibold">+91 8448-19-3708</p>
-<p class="text-[12px] text-[#656464]">Toll Free Helpline</p>
-</div>
-</div>
-<div class="flex items-start gap-[16px]">
-<span class="material-symbols-outlined text-[#5f5e5e] mt-1">mail</span>
-<div>
-<p class="font-['Inter'] text-[16px] text-[#1a1c1b] font-semibold">averysales@awtx-itw.com</p>
-<p class="text-[12px] text-[#656464]">Technical Support</p>
-</div>
-</div>
-<div class="flex items-start gap-[16px]">
-<span class="material-symbols-outlined text-[#5f5e5e] mt-1">schedule</span>
-<div>
-<p class="font-['Inter'] text-[16px] text-[#1a1c1b]">Mon - Sat: 09:00 - 18:00</p>
-<p class="text-[12px] text-[#656464]">Business Hours</p>
-</div>
-</div>
-</div>
+<footer class="bg-[#0d0d0d] border-t border-white/10 w-full">
+  <div class="max-w-[1440px] mx-auto px-[20px] md:px-[48px] py-[20px] md:py-[24px]">
 
-</div>
-</div>
-<!-- Bottom Strip -->
-<div class="mt-[96px] pt-[32px] border-t border-[#E5E7EB] flex flex-col md:flex-row justify-between items-center gap-[16px]">
-<div class="flex flex-col gap-[4px] text-center md:text-left">
-<p class="font-['Inter'] text-[14px] text-[#656464]">
-                        © 2024 Avery India Limited. All rights reserved. Engineering accuracy since 1911.
-                    </p>
-<p class="font-['Inter'] text-[10px] text-[#ae0011] tracking-widest font-bold">
-                        ENGINEERING ACCURACY. INDUSTRIAL RELIABILITY. TRUSTED FOR GENERATIONS.
-                    </p>
-</div>
-<div class="flex flex-wrap justify-center gap-[24px]">
-<a class="font-['Inter'] text-[14px] text-[#656464] hover:text-[#ae0011] transition-all underline underline-offset-4" href="#">Privacy Policy</a>
-<a class="font-['Inter'] text-[14px] text-[#656464] hover:text-[#ae0011] transition-all underline underline-offset-4" href="#">Terms of Service</a>
-<a class="font-['Inter'] text-[14px] text-[#656464] hover:text-[#ae0011] transition-all underline underline-offset-4" href="#">Compliance</a>
-<a class="font-['Inter'] text-[14px] text-[#656464] hover:text-[#ae0011] transition-all underline underline-offset-4" href="#">Sitemap</a>
-</div>
-</div>
-</div>
+    <!-- Desktop: single row. Mobile: stacked compact -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-[16px] md:gap-0">
+
+      <!-- Left: Brand + tagline -->
+      <div class="flex flex-col gap-[2px]">
+        <img src="./assets/images/logo.png" alt="Avery Weigh-Tronix" class="h-7 md:h-8 w-auto object-contain" />
+        <span class="font-['Inter'] text-[11px] text-[#606060]">Precision Weighing Solutions · Since 1911</span>
+      </div>
+
+      <!-- Center: contact info (hidden on mobile) -->
+      <div class="hidden md:flex items-center gap-[32px]">
+        <div class="flex items-center gap-[8px]">
+          <span class="material-symbols-outlined text-[#ae0011] text-[16px]">call</span>
+          <span class="font-['Inter'] text-[13px] text-[#a0a0a0]">+91 8448-19-3708</span>
+        </div>
+        <div class="flex items-center gap-[8px]">
+          <span class="material-symbols-outlined text-[#ae0011] text-[16px]">mail</span>
+          <span class="font-['Inter'] text-[13px] text-[#a0a0a0]">averysales@awtx-itw.com</span>
+        </div>
+      </div>
+
+      <!-- Right: links + copyright -->
+      <div class="flex flex-col md:flex-row md:items-center gap-[8px] md:gap-[24px]">
+        <div class="flex items-center gap-[16px]">
+          <a class="font-['Inter'] text-[12px] text-[#606060] hover:text-[#ffffff] transition-all" href="#">Privacy</a>
+          <a class="font-['Inter'] text-[12px] text-[#606060] hover:text-[#ffffff] transition-all" href="#">Terms</a>
+          <a class="font-['Inter'] text-[12px] text-[#606060] hover:text-[#ffffff] transition-all" href="#inquiry-section">Contact</a>
+        </div>
+        <span class="font-['Inter'] text-[11px] text-[#404040]">© 2024 Avery India Limited.</span>
+      </div>
+
+    </div>
+  </div>
 </footer>
 <!-- FOOTER END -->
 <script>
@@ -1463,15 +1483,69 @@
 </script>
 
 <!-- Sticky CTA -->
-<div class="fixed bottom-0 left-0 w-full md:bottom-8 md:right-8 md:left-auto md:w-auto z-50">
+<div id="sticky-cta-container" class="fixed bottom-0 left-0 w-full md:bottom-8 md:right-8 md:left-auto md:w-auto z-50 transition-all duration-300">
     <!-- Desktop Sticky Button -->
-    <a href="#query-form" class="hidden md:flex bg-[#ae0011] text-[#ffffff] px-6 py-3 rounded-full font-bold uppercase shadow-lg hover:opacity-90 transition-all hover:scale-105 items-center justify-center gap-2">
+    <a href="#inquiry-section" class="hidden md:flex bg-[#ae0011] text-[#ffffff] px-6 py-3 rounded-full font-bold uppercase shadow-lg hover:opacity-90 transition-all hover:scale-105 items-center justify-center gap-2">
         <span class="material-symbols-outlined text-[20px]">request_quote</span>
         Get a Quote
     </a>
     <!-- Mobile Full-Width Sticky Button -->
-    <a href="#query-form" class="md:hidden bg-[#d71920] text-[#ffffff] w-full py-[16px] text-center font-bold uppercase text-[14px] tracking-wider block shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+    <a href="#inquiry-section" class="md:hidden bg-[#d71920] text-[#ffffff] w-full py-[16px] text-center font-bold uppercase text-[14px] tracking-wider block shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
         GET QUOTE
     </a>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stickyCta = document.getElementById('sticky-cta-container');
+        if (!stickyCta) return;
+
+        // Find all main CTAs on the page (links to inquiry section or buttons that scroll there)
+        // Also track the inquiry section itself, because it has a submit CTA
+        const ctas = Array.from(document.querySelectorAll('a[href="#inquiry-section"], button[onclick*="inquiry-section"], #inquiry-section')).filter(el => {
+            return !stickyCta.contains(el); // Exclude the sticky buttons themselves
+        });
+
+        // Use a Set to track which CTAs are currently visible
+        const visibleCtas = new Set();
+
+        function updateStickyVisibility() {
+            if (window.innerWidth < 768) { // Mobile behavior
+                if (visibleCtas.size > 0) {
+                    stickyCta.style.transform = 'translateY(100%)';
+                    stickyCta.style.opacity = '0';
+                    stickyCta.style.pointerEvents = 'none';
+                } else {
+                    stickyCta.style.transform = 'translateY(0)';
+                    stickyCta.style.opacity = '1';
+                    stickyCta.style.pointerEvents = 'auto';
+                }
+            } else { // Desktop behavior - always show
+                stickyCta.style.transform = 'translateY(0)';
+                stickyCta.style.opacity = '1';
+                stickyCta.style.pointerEvents = 'auto';
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    visibleCtas.add(entry.target);
+                } else {
+                    visibleCtas.delete(entry.target);
+                }
+            });
+            updateStickyVisibility();
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Triggers when at least 10% of the CTA is visible
+        });
+
+        ctas.forEach(cta => observer.observe(cta));
+
+        // Re-check on window resize
+        window.addEventListener('resize', updateStickyVisibility);
+    });
+</script>
 </body></html>

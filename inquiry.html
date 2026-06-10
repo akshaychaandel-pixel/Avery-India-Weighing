@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inquiry Form - Avery India</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#474646",
+                    "inverse-primary": "#ffb4ab",
+                    "outline-variant": "#e6bdb8",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary-fixed": "#e5e2e1",
+                    "outline": "#926f6b",
+                    "surface": "#f9f9f7",
+                    "background": "#f9f9f7",
+                    "on-primary-fixed": "#410002",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "surface-container-low": "#f4f4f2",
+                    "surface-container-highest": "#e2e3e1",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-bright": "#f9f9f7",
+                    "on-tertiary-container": "#eff0f2",
+                    "surface-container-high": "#e8e8e6",
+                    "secondary-container": "#e5e2e1",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1a1c1b",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary-container": "#656464",
+                    "surface-container": "#eeeeec",
+                    "primary-fixed": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e3e1",
+                    "on-primary-container": "#ffece9",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1ef",
+                    "on-surface-variant": "#5d3f3c",
+                    "surface-tint": "#c00014",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#e1e2e4",
+                    "on-surface": "#1a1c1b",
+                    "tertiary": "#525557",
+                    "tertiary-container": "#6b6d6f",
+                    "surface-dim": "#dadad8",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "primary-container": "#d71920",
+                    "primary": "#ae0011",
+                    "inverse-surface": "#2f3130",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem",
+                    "card": "1.25rem"
+            },
+            "spacing": {
+                    "unit-12": "48px",
+                    "gutter": "24px",
+                    "unit-1": "4px",
+                    "margin-desktop": "64px",
+                    "base": "4px",
+                    "unit-8": "32px",
+                    "margin-mobile": "20px",
+                    "unit-16": "64px",
+                    "unit-4": "16px",
+                    "unit-6": "24px",
+                    "unit-2": "8px",
+                    "unit-24": "96px"
+            },
+            "fontFamily": {
+                    "metric-xl": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "metric-xl": ["56px", {"lineHeight": "1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            },
+            "backgroundImage": {
+                "blueprint-grid": "linear-gradient(to right, #E5E7EB 0.5px, transparent 0.5px), linear-gradient(to bottom, #E5E7EB 0.5px, transparent 0.5px)"
+            },
+            "backgroundSize": {
+                "blueprint-grid": "48px 48px"
+            },
+            "boxShadow": {
+                "premium": "0 20px 40px rgba(0,0,0,0.04)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .input-technical {
+            border-bottom: 2px solid #E5E7EB;
+            transition: border-color 0.3s ease;
+        }
+        .input-technical:focus {
+            outline: none;
+            border-bottom-color: #D71920; /* Avery Red */
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen text-on-background relative overflow-x-hidden">
+<!-- Architectural Grid Background -->
+<div class="fixed inset-0 pointer-events-none bg-blueprint-grid bg-blueprint-grid z-[-1] opacity-50"></div>
+<!-- Top Navigation Bar -->
+<header class="bg-surface border-b border-surface-variant w-full top-0 sticky z-50 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-unit-16 max-w-full mx-auto">
+<div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-primary">
+                AVERY INDIA
+            </div>
+<nav class="hidden md:flex gap-unit-8">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-300" href="#">Heritage</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-300" href="#">Global Strength</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-300" href="#">Authority</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Contact</a>
+</nav>
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-unit-6 py-unit-2 rounded hover:bg-primary-container transition-colors uppercase">
+                    GET A QUOTE
+                </button>
+</div>
+<!-- Mobile Menu Toggle (Visual Only) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="py-unit-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="mb-unit-12">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface uppercase mb-unit-4">
+                ASK YOUR QUERY
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                Connect with our engineering specialists. Please provide your requirements below, and our technical team will respond with precise solutions.
+            </p>
+</div>
+<!-- Premium Form Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-[20px] shadow-premium p-unit-8 md:p-unit-12">
+<form action="#" class="space-y-unit-8" method="POST">
+<!-- Row 1: Personal Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-unit-6">
+<!-- Full Name -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="fullName">
+                            FULL NAME
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                person
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="fullName" name="fullName" placeholder="Full Name" type="text"/>
+</div>
+</div>
+<!-- Email ID -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="email">
+                            EMAIL ID
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                mail
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="email" name="email" placeholder="Email ID" type="email"/>
+</div>
+</div>
+<!-- Phone No. -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="phone">
+                            PHONE NO.
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                call
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="phone" name="phone" placeholder="Phone No." type="tel"/>
+</div>
+</div>
+<!-- Company Name -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="company">
+                            COMPANY NAME
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                domain
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="company" name="company" placeholder="Company Name" type="text"/>
+</div>
+</div>
+</div>
+<!-- Row 2: Location -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-6">
+<!-- State -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="state">
+                            STATE
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                map
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="state" name="state" placeholder="State" type="text"/>
+</div>
+</div>
+<!-- City -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="city">
+                            CITY
+                        </label>
+<div class="relative">
+<span class="absolute left-unit-4 top-1/2 -translate-y-1/2 text-secondary material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">
+                                location_city
+                            </span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg pl-unit-12 pr-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors" id="city" name="city" placeholder="City" type="text"/>
+</div>
+</div>
+</div>
+<!-- Row 3: Application -->
+<div class="flex flex-col gap-unit-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="application">
+                        APPLICATION INTERESTED IN *
+                    </label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg px-unit-4 py-unit-4 font-body-md text-body-md text-on-surface appearance-none focus:ring-0 focus:border-primary transition-colors cursor-pointer" id="application" name="application">
+<option class="text-secondary-fixed-dim" disabled="" selected="" value="">Select Application</option>
+<option value="heavy-weighing">Heavy Capacity Weighing</option>
+<option value="process-automation">Process Automation</option>
+<option value="testing-systems">Material Testing Systems</option>
+<option value="other">Other Engineering Solutions</option>
+</select>
+<span class="absolute right-unit-4 top-1/2 -translate-y-1/2 text-secondary pointer-events-none material-symbols-outlined">
+                            expand_more
+                        </span>
+</div>
+</div>
+<!-- Row 4: Requirement & Submit -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-unit-8 items-end">
+<!-- Requirement Textarea -->
+<div class="flex flex-col gap-unit-2 h-full">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="requirement">
+                            SPECIFY YOUR REQUIREMENT *
+                        </label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/50 rounded-t-lg px-unit-4 py-unit-4 font-body-md text-body-md text-on-surface placeholder:text-secondary-fixed-dim focus:ring-0 focus:border-primary transition-colors resize-none h-full min-h-[120px]" id="requirement" name="requirement" placeholder="Please provide details about your requirements..." rows="4"></textarea>
+</div>
+<!-- Submit Action Area -->
+<div class="flex flex-col gap-unit-4 justify-end h-full pt-unit-6 lg:pt-0">
+<button class="w-full bg-primary-container text-on-primary font-headline-sm text-headline-sm py-unit-4 rounded-lg hover:bg-primary transition-all duration-300 flex items-center justify-center gap-unit-2 group shadow-sm hover:shadow-md" type="submit">
+                            ENQUIRE NOW
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" style="font-variation-settings: 'wght' 600;">
+                                arrow_forward
+                            </span>
+</button>
+<p class="font-body-md text-body-md text-secondary text-sm text-center lg:text-left">
+                            By deploying this request, you agree to our <a class="text-primary hover:underline" href="#">Data Privacy Protocol</a>.
+                        </p>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface border-t border-outline w-full bottom-0 mt-unit-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-unit-8 px-margin-mobile md:px-margin-desktop py-unit-12 max-w-[1440px] mx-auto">
+<div>
+<div class="font-headline-md text-headline-md text-on-primary-fixed mb-unit-4">
+                    AVERY INDIA
+                </div>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant max-w-md">
+                    Engineering Excellence since 1911. Delivering precision measurement and control systems for global heavy industry.
+                </p>
+</div>
+<div class="flex flex-col md:items-end justify-end gap-unit-6">
+<nav class="flex flex-wrap gap-x-unit-6 gap-y-unit-2 md:justify-end">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Compliance</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Investor Relations</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Global Sitemap</a>
+</nav>
+<div class="font-body-md text-body-md text-on-secondary-fixed-variant opacity-80 text-sm">
+                    © 2024 Avery India Ltd. All Rights Reserved. Engineering Excellence since 1911.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
